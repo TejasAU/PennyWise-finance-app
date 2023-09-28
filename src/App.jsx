@@ -1,9 +1,9 @@
 function App() {
 
   return (
-    <h1 className="hover:text-2xl text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <header className="h-10 w-10">
+      <div className="bg-sky-500 h-20">Hello world!</div>
+    </header>
   )
 }
 
