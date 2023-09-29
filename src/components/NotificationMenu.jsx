@@ -24,16 +24,14 @@ export function NotificationMenu() {
                     </IconButton>
                 </MenuHandler>
             </Badge>
-            <MenuList className='flex flex-col gap-2'>
+            <MenuList className='flex flex-col gap-2 bg-rich-black text-off-white'>
                 <MenuItem className="flex items-center gap-4 py-2 pr-8 pl-2">
                     <div className="flex flex-col gap-1">
-                        <Typography variant="small" color="gray" className="font-normal">
-                            <span className="font-medium text-blue-gray-900">Your daily challenges
-                            have been reset</span>
-                        </Typography>
+                        <span className="font-bold">Your daily challenges
+                        have been reset</span>
                         <Typography
                             variant="small"
-                            className="flex items-center gap-1 text-xs text-gray-600"
+                            className="flex items-center gap-1 text-xs"
                         >   
                             Make sure to complete them
                         </Typography>
@@ -41,13 +39,11 @@ export function NotificationMenu() {
                 </MenuItem>
                 <MenuItem className="flex items-center gap-4 py-2 pr-8 pl-2">
                     <div className="flex flex-col gap-1">
-                        <Typography variant="small" color="gray" className="font-normal">
-                            <div className="font-medium text-blue-gray-900">Your monthly budget for 
-                            'Food' has reached 90% </div>
-                        </Typography>
+                        <span className='font-bold'>Your monthly budget for 
+                        'Food' has reached 90% </span>
                         <Typography
                             variant="small"
-                            className="flex items-center gap-1 text-xs text-gray-600"
+                            className="flex items-center gap-1 text-xs"
                         >
                             Save now
                         </Typography>
@@ -55,13 +51,11 @@ export function NotificationMenu() {
                 </MenuItem>
                 <MenuItem className="flex items-center gap-4 py-2 pr-8 pl-2">
                     <div className="flex flex-col gap-1">
-                        <Typography variant="small" color="gray" className="font-normal">
-                            <span className="font-medium text-blue-gray-900">Redeem rewards with
-                            the coins you've earned!</span>
-                        </Typography>
+                        <span className="font-bold">Redeem rewards with
+                        the coins you've earned!</span>
                         <Typography
                             variant="small"
-                            className="flex items-center gap-1 text-xs text-gray-600"
+                            className="flex items-center gap-1 text-xs"
                         >
                             Explore our offerings
                         </Typography>
