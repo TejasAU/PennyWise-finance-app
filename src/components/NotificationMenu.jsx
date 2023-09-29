@@ -12,7 +12,7 @@ export function NotificationMenu() {
             }}
             placement='bottom-end'
         >
-            <Badge color='light-green' overlap='circular'>
+            <Badge color='green' overlap='circular'>
                 <MenuHandler>
                     <IconButton 
                         size='sm'
