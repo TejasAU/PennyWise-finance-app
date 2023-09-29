@@ -12,7 +12,7 @@ export function Sidebar() {
     return(
             <Card 
                 className={`h-[calc(100vh)] w-full max-w-[20rem] p-1    
-                shadow-xl shadow-blue-gray-900/5 bg-rich-black 
+                shadow-sm shadow-off-white bg-navy-blue
                 ease-in-out duration-200 text-lg text-emerald 
                 rounded-none`}
             >
