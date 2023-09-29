@@ -6,6 +6,7 @@ import { IconButton } from '@material-tailwind/react'
 import { NotificationMenu } from './NotificationMenu'
 import { useContext } from 'react'
 import { AppContext } from '../App'
+import { Profile } from './Profile'
 
 export function Header() {
 
@@ -26,7 +27,7 @@ export function Header() {
                 >
                     <Menu />
                 </IconButton>
-                <nav className='flex gap-3'>
+                <nav className='flex gap-3 justify-center items-center'>
                     <NotificationMenu />
                     <IconButton 
                             size='sm'
@@ -36,6 +37,7 @@ export function Header() {
                     >
                         <Search />
                     </IconButton>
+                    <Profile />
                 </nav>
             </header>
         </IconContext.Provider>
