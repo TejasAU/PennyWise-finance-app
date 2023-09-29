@@ -1,9 +1,9 @@
-import { FiBell as Bell } from 'react-icons/fi'
 import { FiSearch as Search } from 'react-icons/fi'
 import { FiMenu as Menu } from 'react-icons/fi'
 import { IconContext } from 'react-icons'
 
-import { IconButton } from '@material-tailwind/react'
+import { Badge, IconButton } from '@material-tailwind/react'
+import { NotificationMenu } from './NotificationMenu'
 
 export function Header() {
     return (
@@ -21,19 +21,12 @@ export function Header() {
                 <Menu />
                 </IconButton>
                 <nav className='flex gap-3'>
+                    <NotificationMenu />
                     <IconButton 
-                        size='sm'
-                        ripple={true} 
-                        variant='text' 
-                        className='rounded-full hover:bg-gray-800 text-off-white'
-                    >
-                        <Bell />
-                    </IconButton>
-                    <IconButton 
-                        size='sm'
-                        ripple={true} 
-                        variant='text' 
-                        className='rounded-full hover:bg-gray-800 text-off-white'
+                            size='sm'
+                            ripple={true} 
+                            variant='text' 
+                            className='rounded-full hover:bg-gray-800 text-off-white'
                     >
                         <Search />
                     </IconButton>
