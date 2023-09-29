@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { Sidebar } from './Sidebar'
 
 export function SidebarHandler() {
-    const [isOpen, setIsOpen] = useState(false)
     
     return (
         <>
@@ -13,11 +12,9 @@ export function SidebarHandler() {
                 ripple={true} 
                 variant='text' 
                 className='rounded-full hover:bg-gray-800 text-off-white'
-                onClick={() => setIsOpen(!isOpen)}
-                >
+            >
                 <Menu />
             </IconButton>
-            <Sidebar isOpen={isOpen} />
         </>   
     )
 }
