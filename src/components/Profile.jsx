@@ -1,5 +1,12 @@
-import { Menu, MenuHandler, Button, Avatar, Typography } from '@material-tailwind/react'
-import maleProfile from '../assets/maleProfile.jpeg'
+import { 
+    Menu, 
+    MenuHandler, 
+    MenuList, 
+    MenuItem, 
+    Button, 
+    Avatar } from '@material-tailwind/react'
+
+    import maleProfile from '../assets/maleProfile.jpeg'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react';
 
@@ -9,7 +16,15 @@ export function Profile() {
     const closeMenu = () => setIsMenuOpen(false);
 
     return (
-        <Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
+        <Menu 
+            open={isMenuOpen} 
+            handler={setIsMenuOpen} 
+            placement="bottom"
+            animate={{
+                mount: { y: 0 },
+                unmount: { y: 25 },
+            }}
+        >
             <MenuHandler>
                 <Button
                     variant='text'
@@ -32,6 +47,13 @@ export function Profile() {
                     />
                 </Button>
             </MenuHandler>
+            <MenuList className='flex flex-col gap-2 bg-rich-black text-off-white'>
+                <MenuItem>Menu Item 1</MenuItem>
+                <MenuItem>Menu Item 2</MenuItem>
+                <MenuItem>Menu Item 3</MenuItem>
+                <hr className="my-3" />
+                <MenuItem>Menu Item 4</MenuItem>
+            </MenuList>
         </Menu>
     )
 }
