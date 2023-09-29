@@ -5,7 +5,7 @@ import { IconContext } from 'react-icons'
 
 import { IconButton } from '@material-tailwind/react'
 
-function Navbar() {
+export function Header() {
     return (
         <IconContext.Provider value={{ size: '1.3rem' }}>
             <header 
@@ -21,26 +21,24 @@ function Navbar() {
                 <Menu />
                 </IconButton>
                 <nav className='flex gap-3'>
-                <IconButton 
-                    size='sm'
-                    ripple={true} 
-                    variant='text' 
-                    className='rounded-full hover:bg-gray-800 text-off-white'
-                >
-                    <Bell />
-                </IconButton>
-                <IconButton 
-                    size='sm'
-                    ripple={true} 
-                    variant='text' 
-                    className='rounded-full hover:bg-gray-800 text-off-white'
-                >
-                    <Search />
-                </IconButton>
+                    <IconButton 
+                        size='sm'
+                        ripple={true} 
+                        variant='text' 
+                        className='rounded-full hover:bg-gray-800 text-off-white'
+                    >
+                        <Bell />
+                    </IconButton>
+                    <IconButton 
+                        size='sm'
+                        ripple={true} 
+                        variant='text' 
+                        className='rounded-full hover:bg-gray-800 text-off-white'
+                    >
+                        <Search />
+                    </IconButton>
                 </nav>
             </header>
         </IconContext.Provider>
     )
 }
-
-export default Navbar
