@@ -1,13 +1,7 @@
 import { createContext, useState } from 'react'
-import { Header } from './components/Header'
-import { Main } from './components/Main'
-import { Sidebar } from './components/Sidebar'
+import { Header } from './components/navbar/Header'
+import { Sidebar } from './components/sidebar/Sidebar'
 import { Outlet } from 'react-router-dom'
-import { Budgets } from './components/Budgets'
-import { AllChallenges } from './components/AllChallenges'
-import { Analytics } from './components/Analytics'
-import { Rewards } from './components/Rewards'
-import { ProfileDetails } from './components/ProfileDetails'
 
 export const AppContext = createContext()
 
