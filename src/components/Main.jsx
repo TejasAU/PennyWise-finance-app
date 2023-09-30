@@ -1,26 +1,14 @@
-import { Card } from "@material-tailwind/react";
-import { Card as TremorCard, Title, DonutChart, Legend } from "@tremor/react";
-const budgetData = [
-    {
-        category: 'Food',
-        value: 300,
-    },
-    {
-        category: 'Transport',
-        value: 220,
-    },
-    {
-        category: 'Entertainment',
-        value: 150,
-    },
-];
+import { 
+    Card, 
+    List,
+    ListItem,
+    ListItemPrefix,
+    ListItemSuffix 
+} from "@material-tailwind/react";
+import { GiAbstract020 as ChallengeIcon } from "react-icons/gi" 
 
-const valueFormatter = (number) => `Rs. ${number}`
-
-/* Use the following colors: pink, purple, indigo, blue, cyan, teal, yellow, lime, green
-    amber, orange, red and gray
-*/
-
+import { ExpensesChart } from "./ExpensesChart";
+import { DailyChallenges } from "./DailyChallenges";
 
 export function Main() {
     return(
@@ -39,31 +27,14 @@ export function Main() {
                     hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green"
                 >
                     Daily Expenses
-                    <div className="flex flex-col items-center justify-center">
-                        <DonutChart
-                            className="mt-6"
-                            data={budgetData}
-                            category="value"
-                            index="category"
-                            // TODO generate random color array
-                            colors={["purple","red","cyan"]}
-                            valueFormatter={valueFormatter}
-                        />
-                        <Legend
-                            className="mt-3 m"
-                            // TODO get dynamically from data
-                            categories={["Food","Transport","Entertainment"]}
-                            // TODO generate random color array
-                            colors={["purple","red","cyan"]}
-                        />
-                    </div>
+                    <ExpensesChart />
                 </Card>
                 <Card 
                     className="text-xl text-off-white p-4 bg-navy-blue
                     row-span-2 col-span-2 row-start-3 transition-shadow duration-300
                     hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green"
                 >
-                    Daily Challenges
+                    Recent Transactions
                 </Card>
                 <Card 
                     className="text-xl text-off-white p-4 bg-navy-blue
@@ -76,8 +47,9 @@ export function Main() {
                     className="text-xl text-off-white p-4 bg-navy-blue
                     col-span-2 row-span-3 col-start-2 row-start-5 transition-shadow duration-300
                     hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green"
-                >
-                    Recent Transactions
+                >   
+                    Daily Challenges
+                    <DailyChallenges />
                 </Card>
             </div>
         </main>
