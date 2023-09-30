@@ -4,11 +4,16 @@ import {
     MenuList, 
     MenuItem, 
     Button, 
-    Avatar } from '@material-tailwind/react'
-
-    import maleProfile from '../assets/maleProfile.jpeg'
+    Avatar, 
+    Typography
+} from '@material-tailwind/react'
+import maleProfile from '../assets/maleProfile.jpeg'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react';
+import { FaRegUserCircle as User } from 'react-icons/fa'
+import { FaUserEdit as UserEdit } from 'react-icons/fa'
+import { FiPower as PowerOff } from 'react-icons/fi';
+
 
 export function Profile() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,11 +53,31 @@ export function Profile() {
                 </Button>
             </MenuHandler>
             <MenuList className='flex flex-col gap-2 bg-rich-black text-off-white'>
-                <MenuItem>Menu Item 1</MenuItem>
-                <MenuItem>Menu Item 2</MenuItem>
-                <MenuItem>Menu Item 3</MenuItem>
-                <hr className="my-3" />
-                <MenuItem>Menu Item 4</MenuItem>
+                <MenuItem className='py-2 hover:bg-navy-blue'>
+                    <Typography 
+                        variant='small' className='font-normal flex items-center gap-4'
+                    >
+                        <User />
+                        My Profile
+                    </Typography>
+                </MenuItem>
+                <MenuItem className='py-2'>
+                    <Typography 
+                        variant='small' className='font-normal flex items-center gap-4'
+                    >
+                        <UserEdit className='h-5 w-5'/>
+                        Edit Profile
+                    </Typography>
+                </MenuItem> 
+                <hr className="my-1" />
+                <MenuItem className='py-2 text-red-600'>
+                    <Typography 
+                        variant='small' className='font-normal flex items-center gap-4'
+                    >
+                        <PowerOff />
+                        Sign Out
+                    </Typography>
+                </MenuItem>
             </MenuList>
         </Menu>
     )
