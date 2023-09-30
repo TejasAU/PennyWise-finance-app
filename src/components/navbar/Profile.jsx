@@ -7,7 +7,7 @@ import {
     Avatar, 
     Typography
 } from '@material-tailwind/react'
-import maleProfile from '../assets/maleProfile.jpeg'
+import maleProfile from '../../assets/maleProfile.jpeg'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react';
 import { FaRegUserCircle as User } from 'react-icons/fa'
