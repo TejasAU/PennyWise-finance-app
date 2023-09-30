@@ -10,9 +10,9 @@ function App() {
 
   return (
     <AppContext.Provider value = { {isMounted, setIsMounted}}>
-      <div className='flex'>
+      <div className='flex h-full w-full'>
         {isMounted && <Sidebar />}
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col h-full w-full'>
           <Header />
           <Main />
         </div>

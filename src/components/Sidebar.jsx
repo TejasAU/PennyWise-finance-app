@@ -11,10 +11,10 @@ export function Sidebar() {
     
     return(
             <Card 
-                className={`h-[calc(100vh)] w-full max-w-[20rem] p-1    
+                className="w-full max-w-[20rem] p-1    
                 shadow-sm shadow-off-white bg-navy-blue
                 ease-in-out duration-200 text-lg text-emerald 
-                rounded-none`}
+                rounded-none"
             >
                 <div className="mb-2 p-4 text-xl">
                     PennyWise
