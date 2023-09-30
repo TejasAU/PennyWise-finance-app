@@ -9,6 +9,7 @@ import { GiAbstract020 as ChallengeIcon } from "react-icons/gi"
 
 import { ExpensesChart } from "./ExpensesChart";
 import { DailyChallenges } from "./DailyChallenges";
+import { TransactionList } from "./TransactionList";
 
 export function Main() {
     return(
@@ -35,6 +36,7 @@ export function Main() {
                     hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green"
                 >
                     Recent Transactions
+                    <TransactionList />
                 </Card>
                 <Card 
                     className="text-xl text-off-white p-4 bg-navy-blue
@@ -54,4 +56,4 @@ export function Main() {
             </div>
         </main>
     )
-}
+}   
