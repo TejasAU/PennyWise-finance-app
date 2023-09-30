@@ -15,19 +15,19 @@ export function Header() {
     return (
         <IconContext.Provider value={{ size: '1.3rem' }}>
             <header 
-                className="text-off-white h-14 bg-rich-black px-6
+                className="text-off-white h-14 bg-rich-black px-6 py-2
                 flex justify-between items-center"
             >
                 <IconButton 
                     size='sm'
                     ripple={true} 
                     variant='text' 
-                    className='rounded-full hover:bg-gray-800 text-off-white'
+                    className='rounded-full hover:bg-gray-800 text-off-white mt-2'
                     onClick={ () => setIsMounted(!isMounted)}
                 >
                     <Menu />
                 </IconButton>
-                <nav className='flex gap-3 justify-center items-center'>
+                <nav className='flex gap-3 justify-center items-center mt-2'>
                     <NotificationMenu />
                     <IconButton 
                             size='sm'
