@@ -13,7 +13,7 @@ import { useState } from 'react';
 import { FaRegUserCircle as User } from 'react-icons/fa'
 import { FaUserEdit as UserEdit } from 'react-icons/fa'
 import { FiPower as PowerOff } from 'react-icons/fi';
-
+import { Link } from 'react-router-dom';
 
 export function Profile() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,12 +54,14 @@ export function Profile() {
             </MenuHandler>
             <MenuList className='flex flex-col gap-2 bg-rich-black text-off-white'>
                 <MenuItem className='py-2 hover:bg-navy-blue'>
-                    <Typography 
-                        variant='small' className='font-normal flex items-center gap-4'
-                    >
-                        <User />
-                        My Profile
-                    </Typography>
+                    <Link to='/profile'>
+                        <Typography 
+                            variant='small' className='font-normal flex items-center gap-4'
+                        >
+                            <User />
+                            My Profile
+                        </Typography>
+                    </Link>
                 </MenuItem>
                 <MenuItem className='py-2'>
                     <Typography 
