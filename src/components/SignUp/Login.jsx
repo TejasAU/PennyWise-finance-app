@@ -1,7 +1,9 @@
 import { useContext } from "react"
 import { AppContext } from "../../App"
 // import { Button } from "@material-tailwind/react"
-import { Card,Input,Checkbox,Button,Typography } from "@material-tailwind/react";
+import { Card,Input,Checkbox,Button,Typography, } from "@material-tailwind/react";
+
+
 
 export function Login() {
     const { setIsAuth } = useContext(AppContext)
@@ -17,10 +19,10 @@ export function Login() {
                 Go to Home Page
             </Button> */}
             <Card color="transparent" shadow={false}>
-      <Typography variant="h4" color="blue-gray">
+      <Typography variant="h4" color="green">
         Welcome Back!!
       </Typography>
-      <Typography color="gray" className="mt-1 font-normal">
+      <Typography color="green" className="mt-1 font-normal">
         Enter your details to login.
       </Typography>
       <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
@@ -48,12 +50,13 @@ export function Login() {
           containerProps={{ className: "-ml-2.5" }}
         /> */}
         <Button className="mt-6" fullWidth onClick={ () => setIsAuth(true)}>
+        
           Login
-        </Button>
+        </Button >
         <Typography color="gray" className="mt-4 text-center font-normal">
           Make a new account?{" "}
-          <a href="#" className="font-medium text-gray-900">
-            Sign Up
+          <a href="#" className="font-medium text-emerald-50">
+            <Typography color="green">Sign Up</Typography>
           </a>
         </Typography>
       </form>
