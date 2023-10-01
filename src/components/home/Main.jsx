@@ -31,7 +31,7 @@ export function Main() {
                 <Card 
                     className="text-xl p-4 text-off-white  bg-navy-blue
                     row-span-3 row-start-3 transition-shadow duration-300
-                    hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green"
+                    hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green font-main font-medium"
                 >
                     Daily Expenses
                     <ExpensesChart />
@@ -54,7 +54,7 @@ export function Main() {
                 <Card 
                     className="text-xl text-off-white p-4 bg-navy-blue
                     col-span-2 row-span-3 col-start-2 row-start-5 transition-shadow duration-300
-                    hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green"
+                    hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green font-display"
                 >   
                     Daily Challenges
                     <DailyChallenges />

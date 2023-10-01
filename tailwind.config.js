@@ -17,7 +17,10 @@ export default withMT({
     transparent: "transparent",
     current: "currentColor",
     extend: {
-
+      fontFamily: {
+        appname : ["Pixelify Sans", "cursive"],
+        main: ["Quicksand", "sans-serif"],
+      },
       colors: {
         // light mode
         tremor: {

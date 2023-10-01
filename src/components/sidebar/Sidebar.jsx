@@ -17,14 +17,14 @@ export function Sidebar() {
                 ease-in-out duration-200 text-lg text-emerald 
                 rounded-none"
             >
-                <div className="mb-2 p-4 text-2xl font-bold">
+                <div className="mb-2 p-4 text-3xl font-appname font-extrabold">
                     PennyWise
                 </div>
                 <List className="text-emerald">
                     <Link to='/home'>
                         <ListItem 
                             className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white h-14 mb-2"
+                            focus:bg-dark-green focus:text-off-white h-14 mb-2 font-main font-semibold"
                         >
                             <ListItemPrefix>
                                 <Home />
@@ -35,7 +35,7 @@ export function Sidebar() {
                     <Link to='/budgets'>
                         <ListItem 
                             className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white h-14 mb-2"  
+                            focus:bg-dark-green focus:text-off-white h-14 mb-2 font-main font-semibold"  
                         >
                             <ListItemPrefix>
                                 <Category />
@@ -46,7 +46,7 @@ export function Sidebar() {
                     <Link to='/challenges'>
                         <ListItem 
                             className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white h-14 mb-2" 
+                            focus:bg-dark-green focus:text-off-white h-14 mb-2 font-main font-semibold" 
                         >
                             <ListItemPrefix>
                                 <Challenge />
@@ -57,7 +57,7 @@ export function Sidebar() {
                     <Link to='/analytics'>
                         <ListItem 
                             className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white h-14 mb-2" 
+                            focus:bg-dark-green focus:text-off-white h-14 mb-2 font-main font-semibold" 
                         >
                             <ListItemPrefix>
                                 <Analytics />
@@ -68,7 +68,7 @@ export function Sidebar() {
                     <Link to='/rewards'>
                         <ListItem 
                             className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white h-14 mb-2" 
+                            focus:bg-dark-green focus:text-off-white h-14 mb-2 font-main font-semibold" 
                         >
                             <ListItemPrefix>
                                 <Tag />

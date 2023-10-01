@@ -43,7 +43,7 @@ export function Profile() {
                         className="border border-gray-900 p-0.5"
                         src={maleProfile}
                     />
-                    Hi, John!
+                    <div className='font-main font-semibold'>Hi, John!</div>
                     <ChevronDownIcon
                         strokeWidth={2.5}
                         className={`h-3 w-3 transition-transform ${
@@ -56,7 +56,7 @@ export function Profile() {
                 <MenuItem className='py-2 hover:bg-navy-blue'>
                     <Link to='/profile'>
                         <Typography 
-                            variant='small' className='font-normal flex items-center gap-4'
+                            variant='small' className='font-main font-semibold flex items-center gap-4'
                         >
                             <User />
                             My Profile
@@ -65,7 +65,7 @@ export function Profile() {
                 </MenuItem>
                 <MenuItem className='py-2'>
                     <Typography 
-                        variant='small' className='font-normal flex items-center gap-4'
+                        variant='small' className='font-main font-semibold flex items-center gap-4'
                     >
                         <UserEdit className='h-5 w-5'/>
                         Edit Profile
@@ -74,7 +74,7 @@ export function Profile() {
                 <hr className="my-1" />
                 <MenuItem className='py-2 text-red-600'>
                     <Typography 
-                        variant='small' className='font-normal flex items-center gap-4'
+                        variant='small' className='font-main font-semibold flex items-center gap-4'
                     >
                         <PowerOff />
                         Sign Out
