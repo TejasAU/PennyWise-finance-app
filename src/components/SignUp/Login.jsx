@@ -11,13 +11,7 @@ export function Login() {
     return(
         <main className="bg-rich-black text-off-white h-full flex items-center justify-center">
             
-            {/* <Button 
-                variant="outlined"
-                onClick={ () => setIsAuth(true)}
-                className="text-off-white border border-emerald"
-            >
-                Go to Home Page
-            </Button> */}
+            
             <Card color="transparent" shadow={false}>
       <Typography variant="h4" color="green" className="flex items-center justify-center">
         Welcome Back!!
@@ -31,24 +25,7 @@ export function Login() {
           {/* <Input size="lg" label="Email" /> */}
           <Input type="password" size="lg" label="Password" />
         </div>
-        {/* <Checkbox
-          label={
-            <Typography
-              variant="small"
-              color="gray"
-              className="flex items-center font-normal"
-            >
-              I agree the
-              <a
-                href="#"
-                className="font-medium transition-colors hover:text-gray-900"
-              >
-                &nbsp;Terms and Conditions
-              </a>
-            </Typography>
-          }
-          containerProps={{ className: "-ml-2.5" }}
-        /> */}
+        
         <Button className="mt-6" fullWidth onClick={ () => setIsAuth(true)}>
         
           Login
