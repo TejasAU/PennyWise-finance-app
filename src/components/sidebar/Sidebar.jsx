@@ -5,6 +5,7 @@ import { FiTag as Tag, FiHome as Home } from 'react-icons/fi'
 import { TbCategory as Category, TbDeviceDesktopAnalytics as Analytics } from 'react-icons/tb'
 import { BsListTask as Challenge } from 'react-icons/bs'
 import { Link } from "react-router-dom"
+import { IconButton } from "@material-tailwind/react";
 
 export function Sidebar() {
     
@@ -17,8 +18,14 @@ export function Sidebar() {
                 ease-in-out duration-200 text-lg text-emerald 
                 rounded-none"
             >
-                <div className="mb-2 p-4 text-3xl font-appname font-extrabold">
+                <div className="content-center flex flex-row mb-2 p-4 text-3xl font-appname font-extrabold ">
+                    
+                    <IconButton size="lg">
+                    <img src="src\assets\logo.png" />
+                    </IconButton>
+                    
                     PennyWise
+                    
                 </div>
                 <List className="text-emerald">
                     <Link to='/home'>
