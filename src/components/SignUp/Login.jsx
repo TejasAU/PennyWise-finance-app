@@ -49,9 +49,10 @@ export function Login() {
           }
           containerProps={{ className: "-ml-2.5" }}
         /> */}
-        <Button className="mt-6" fullWidth>
+        <Button className="mt-6" fullWidth onClick={ () => setIsAuth(true)}>
+        
           Login
-        </Button>
+        </Button >
         <Typography color="gray" className="mt-4 text-center font-normal">
           Make a new account?{" "}
           <a href="#" className="font-medium text-emerald-50">
