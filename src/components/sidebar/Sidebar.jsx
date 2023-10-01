@@ -1,6 +1,6 @@
 import { Card, List, ListItem, ListItemPrefix } from "@material-tailwind/react"
 import { useContext } from "react"
-import { AppContext } from "../App"
+import { AppContext } from "../../App"
 import { FiTag as Tag, FiHome as Home } from 'react-icons/fi' 
 import { TbCategory as Category, TbDeviceDesktopAnalytics as Analytics } from 'react-icons/tb'
 import { BsListTask as Challenge } from 'react-icons/bs'
@@ -17,7 +17,7 @@ export function Sidebar() {
                 ease-in-out duration-200 text-lg text-emerald 
                 rounded-none"
             >
-                <div className="mb-2 p-4 text-xl">
+                <div className="mb-2 p-4 text-2xl font-bold">
                     PennyWise
                 </div>
                 <List className="text-emerald">

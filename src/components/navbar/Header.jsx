@@ -5,7 +5,7 @@ import { IconContext } from 'react-icons'
 import { IconButton } from '@material-tailwind/react'
 import { NotificationMenu } from './NotificationMenu'
 import { useContext } from 'react'
-import { AppContext } from '../App'
+import { AppContext } from '../../App'
 import { Profile } from './Profile'
 
 export function Header() {

@@ -1,17 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import { Main } from './components/Main.jsx'
+import { Main } from './components/home/Main.jsx'
 import './index.css'
 
 
 import { ThemeProvider } from '@material-tailwind/react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Budgets } from './components/Budgets.jsx'
-import { ProfileDetails } from './components/ProfileDetails.jsx'
-import { Rewards } from './components/Rewards.jsx'
-import { Analytics } from './components/Analytics.jsx'
-import { AllChallenges } from './components/AllChallenges.jsx'
+import { Budgets } from './components/budgets/Budgets.jsx'
+import { ProfileDetails } from './components/profile/ProfileDetails.jsx'
+import { Rewards } from './components/rewards/Rewards.jsx'
+import { Analytics } from './components/analytics/Analytics.jsx'
+import { AllChallenges } from './components/challenges/AllChallenges.jsx'
 
 const router = createBrowserRouter([
   {
