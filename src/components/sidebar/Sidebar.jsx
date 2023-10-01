@@ -40,7 +40,7 @@ export function Sidebar() {
                             <ListItemPrefix>
                                 <Category />
                             </ListItemPrefix>
-                            Budgets and Categories
+                            Budgets
                         </ListItem>
                     </Link>
                     <Link to='/challenges'>

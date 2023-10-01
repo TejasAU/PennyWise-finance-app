@@ -1,11 +1,4 @@
-import { 
-    Card, 
-    List,
-    ListItem,
-    ListItemPrefix,
-    ListItemSuffix 
-} from "@material-tailwind/react";
-import { GiAbstract020 as ChallengeIcon } from "react-icons/gi" 
+import { Card } from "@material-tailwind/react";
 
 import { ExpensesChart } from "./ExpensesChart";
 import { DailyChallenges } from "./DailyChallenges";
