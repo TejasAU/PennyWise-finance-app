@@ -83,7 +83,7 @@ export function Profile() {
                     </Typography>
                 </MenuItem> 
                 <hr className="my-1" />
-                <MenuItem className='py-2 text-red-600'>
+                <MenuItem className='py-2 text-red-600' onClick={() => setIsAuth(false)}>
                     <Typography 
                         variant='small' className='font-main font-semibold flex items-center gap-4'
                     >
@@ -91,14 +91,6 @@ export function Profile() {
                         Sign Out
                     </Typography>
                 </MenuItem>
-                <Link to='/'>
-                    <MenuItem className='py-2' onClick={() => setIsAuth(false)}>
-                    <Typography variant='small' className='font-normal flex items-center gap-4'>
-                        <LogIcon />
-                        Login
-                    </Typography>
-                    </MenuItem>
-                </Link>
             </MenuList>
         </Menu>
         
