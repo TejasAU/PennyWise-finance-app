@@ -4,7 +4,9 @@ import { ExpensesChart } from "./ExpensesChart";
 import { DailyChallenges } from "./DailyChallenges";
 import { TransactionList } from "./TransactionList";
 
+
 export function Main() {
+    
     return(
         <main className= "bg-rich-black">
             
@@ -59,6 +61,7 @@ export function Main() {
                     Daily Challenges
                     <DailyChallenges />
                 </Card>
+               
             </div>
         </main>
     )

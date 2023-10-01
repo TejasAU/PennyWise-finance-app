@@ -14,11 +14,19 @@ import { FaRegUserCircle as User } from 'react-icons/fa'
 import { FaUserEdit as UserEdit } from 'react-icons/fa'
 import { FiPower as PowerOff } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { CiLogin as LogIcon } from "react-icons/ci";
 
 export function Profile() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
  
     const closeMenu = () => setIsMenuOpen(false);
+
+    const [seen, setSeen] = useState(false)
+
+    function togglePop () {
+        setSeen(!seen);
+    };
+
 
     return (
         <Menu 
@@ -80,7 +88,16 @@ export function Profile() {
                         Sign Out
                     </Typography>
                 </MenuItem>
+                <Link to='/SignUp'>
+                <MenuItem className='py-2 text-red-600'>
+                <Typography variant='small' className='font-normal flex items-center gap-4'>
+                    <LogIcon />
+                    Login
+                </Typography>
+                </MenuItem>
+                </Link>
             </MenuList>
         </Menu>
+        
     )
 }
