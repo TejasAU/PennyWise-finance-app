@@ -19,10 +19,10 @@ export function Login() {
                 Go to Home Page
             </Button> */}
             <Card color="transparent" shadow={false}>
-      <Typography variant="h4" color="green">
+      <Typography variant="h4" color="green" className="flex items-center justify-center">
         Welcome Back!!
       </Typography>
-      <Typography color="green" className="mt-1 font-normal">
+      <Typography color="green" className="mt-1 font-normal flex items-center justify-center">
         Enter your details to login.
       </Typography>
       <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
