@@ -9,12 +9,13 @@ import {
 } from '@material-tailwind/react'
 import maleProfile from '../../assets/maleProfile.jpeg'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { FaRegUserCircle as User } from 'react-icons/fa'
 import { FaUserEdit as UserEdit } from 'react-icons/fa'
 import { FiPower as PowerOff } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { CiLogin as LogIcon } from "react-icons/ci";
+import { AppContext } from '../../App';
 
 export function Profile() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,6 +27,8 @@ export function Profile() {
     function togglePop () {
         setSeen(!seen);
     };
+
+    const { setIsAuth } = useContext(AppContext)
 
 
     return (
@@ -88,13 +91,13 @@ export function Profile() {
                         Sign Out
                     </Typography>
                 </MenuItem>
-                <Link to='/SignUp'>
-                <MenuItem className='py-2 text-red-600'>
-                <Typography variant='small' className='font-normal flex items-center gap-4'>
-                    <LogIcon />
-                    Login
-                </Typography>
-                </MenuItem>
+                <Link to='/'>
+                    <MenuItem className='py-2' onClick={() => setIsAuth(false)}>
+                    <Typography variant='small' className='font-normal flex items-center gap-4'>
+                        <LogIcon />
+                        Login
+                    </Typography>
+                    </MenuItem>
                 </Link>
             </MenuList>
         </Menu>
