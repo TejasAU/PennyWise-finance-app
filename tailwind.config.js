@@ -3,6 +3,7 @@
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 export default withMT({
+  mode : "jit",
   darkMode: "class",
   content: [
     "./index.html",
@@ -16,6 +17,7 @@ export default withMT({
     transparent: "transparent",
     current: "currentColor",
     extend: {
+
       colors: {
         // light mode
         tremor: {

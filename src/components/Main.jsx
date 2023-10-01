@@ -14,13 +14,26 @@ import { TransactionList } from "./TransactionList";
 export function Main() {
     return(
         <main className= "bg-rich-black">
+            
             <div className="grid grid-cols-3 grid-rows-[repeat(7,5rem)] gap-8 m-20">    
+            
                 <Card 
+                
                     className="text-xl text-off-white p-4 
                     bg-gradient-to-r from-dark-green to-navy-blue 
                     row-span-2 col-span-3"
                 >
+                    {/* <div className=" animation: spin 3s linear infinite;
+                                        @keyframes spin {
+                                            from {
+                                                transform: rotate(0deg);
+                                                }
+                                            to {
+                                            transform: rotate(360deg);
+                                        }
+                                    }"><img src="src\assets\output-onlinegiftools.gif"></img></div> */}
                     Welcome, John!<br />Let's take a gander at your expenses!
+                    
                 </Card>
                 <Card 
                     className="text-xl p-4 text-off-white  bg-navy-blue
