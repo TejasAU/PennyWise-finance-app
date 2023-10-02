@@ -1,7 +1,12 @@
+import { Card } from "@material-tailwind/react"
+
 export function Rewards() {
     return(
         <main className="bg-rich-black text-off-white h-full">
-            This is Rewards Page
+            Featured Rewards
+            <Card>
+                
+            </Card>
         </main>
     )
 }
