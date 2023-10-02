@@ -9,6 +9,7 @@ import {
 export function FeaturedRew(){
     return(
         <div>
+            This is featured rewards
         </div>
     )
 }
