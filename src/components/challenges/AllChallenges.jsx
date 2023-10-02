@@ -1,7 +1,12 @@
 import React from 'react'
-import { GiRank1 as EasyIcon, GiRank2 as MediumIcon, GiRank3 as HardIcon } from 'react-icons/gi' 
+import { GiAbstract020 as ChallengeIcon } from 'react-icons/gi'
 import {
+    List,
+    ListItem,
+    ListItemPrefix,
+    ListItemSuffix,
     Tabs,
+    Chip,
     TabsHeader,
     TabsBody,
     Tab,
@@ -9,7 +14,7 @@ import {
     TabsHeaderProps
 } from "@material-tailwind/react";
 import { Card } from '@material-tailwind/react';
-import { data } from './ChallengeData';
+import { challengesData } from './ChallengeData';
 
 export function AllChallenges() {
 
@@ -26,18 +31,20 @@ export function AllChallenges() {
                 your financial goals, and earn rewards in the form of coins.
             </Card>
             <Tabs value="dashboard" className='h-3/5 w-4/5'>
+                
                 <TabsHeader 
                     className='bg-transparent h-14'
                     indicatorProps={{
                         className: 'bg-off-white/20'
                     }}  
                 >
-                    {data.map(({ label, value, icon }, index) => (
+                    {challengesData.map(({ label, value, icon }, index) => (
                     <Tab key={value} value={value}>
                         <div className={`flex items-center gap-2 
-                        font-main font-semibold ${index === 0 ? 'text-emerald' :
-                                                  index === 1 ? 'text-yellow-400' :
-                                                  index === 2 ? 'text-red-600' : 'text-off-white'}`}
+                            font-main font-semibold 
+                            ${index === 0 ? 'text-emerald' :
+                            index === 1 ? 'text-yellow-400' :
+                            index === 2 ? 'text-red-600' : 'text-off-white'}`}
                         >
                             {React.createElement(icon, { className: "w-6 h-6" })}
                             {label}
@@ -45,17 +52,45 @@ export function AllChallenges() {
                     </Tab>
                     ))}
                 </TabsHeader>
+
                 <TabsBody className='h-full border-b border-emerald/30 rounded-md' 
                     animate={{
                         initial: { y: 250 },
                         mount: { y: 0 },
                         unmount: { y: 250 },
                 }}>
-                    {data.map(({ value, desc }) => (
-                    <TabPanel key={value} value={value} className='text-off-white text-lg font-main font-normal'>
-                        {desc}
-                    </TabPanel>
-                    ))}
+                    {challengesData.map( 
+                        ({ value, desc }) => (
+                            <TabPanel key={value} value={value} 
+                                className='text-off-white text-lg font-main font-normal'>
+                                <List className="my-5 font-display">
+                                    {desc.map( ({ id, desc, coinValue}) => (
+                                        <ListItem className="hover:bg-gray-800 hover:text-emerald 
+                                            text-off-white focus:bg-dark-green focus:text-off-white 
+                                            h-16" key={id}
+                                        >
+                                            <ListItemPrefix>
+                                                <ChallengeIcon />
+                                            </ListItemPrefix>
+                                                {desc}
+                                            <ListItemSuffix>
+                                                <Chip 
+                                                    value={`+${coinValue}`} 
+                                                    variant="gradient" 
+                                                    color={`${
+                                                        id.includes('easy') ? 'green' :
+                                                        id.includes('med') ? 'amber' :
+                                                        id.includes('hard') ? 'red' : 'amber' 
+                                                    }`} 
+                                                    className="rounded-full">    
+                                                </Chip>
+                                            </ListItemSuffix>
+                                        </ListItem> 
+                                        )
+                                    )}
+                                </List>
+                            </TabPanel>
+                        ))}
                 </TabsBody>
             </Tabs>
         </main>
