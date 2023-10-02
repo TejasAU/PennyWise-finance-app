@@ -11,7 +11,7 @@ import { GiAbstract020 as ChallengeIcon } from "react-icons/gi"
 export function DailyChallenges() {
     return(
         <List className="my-5 font-display">
-            <ListItem className="hover:bg-gray-800 hover:text-emerald text-off-white">
+            <ListItem className="hover:bg-gray-800 hover:text-emerald text-off-white focus:bg-dark-green focus:text-off-white">
                 <ListItemPrefix>
                     <ChallengeIcon />
                 </ListItemPrefix>
@@ -20,7 +20,7 @@ export function DailyChallenges() {
                     <Chip value='+110' variant="gradient" color="amber" className="rounded-full"></Chip>
                 </ListItemSuffix>
             </ListItem>
-            <ListItem className="hover:bg-gray-800 hover:text-emerald text-off-white">
+            <ListItem className="hover:bg-gray-800 hover:text-emerald text-off-white focus:bg-dark-green focus:text-off-white">
                 <ListItemPrefix>
                     <ChallengeIcon />
                 </ListItemPrefix>
@@ -29,7 +29,7 @@ export function DailyChallenges() {
                     <Chip value='+250' variant="gradient" color="amber" className="rounded-full"></Chip>
                 </ListItemSuffix>
             </ListItem>
-            <ListItem className="hover:bg-gray-800 hover:text-emerald text-off-white">
+            <ListItem className="hover:bg-gray-800 hover:text-emerald text-off-white focus:bg-dark-green focus:text-off-white">
                 <ListItemPrefix>
                     <ChallengeIcon />
                 </ListItemPrefix>
@@ -38,7 +38,7 @@ export function DailyChallenges() {
                     <Chip value='+50' variant="gradient" color="amber" className="rounded-full"></Chip>
                 </ListItemSuffix>
             </ListItem>
-            <ListItem className="text-off-white hover:bg-gray-800 hover:text-emerald font-semibold" >
+            <ListItem className="text-off-white hover:bg-gray-800 hover:text-emerald font-semibold focus:bg-dark-green focus:text-off-white" >
                 <Italic>Complete all of these challenges to earn a special reward!</Italic>
             </ListItem>
         </List>
