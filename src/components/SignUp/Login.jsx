@@ -12,7 +12,7 @@ export function Login() {
 
     function handleLogin() {
       setIsAuth(true)
-      navigate("/home")
+      navigate("/")
     }
 
     return(

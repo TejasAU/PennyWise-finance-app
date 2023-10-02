@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 
     function handleLogin() {
       setIsAuth(true)
-      navigate("/home")
+      navigate("/")
     }
 
     return (
