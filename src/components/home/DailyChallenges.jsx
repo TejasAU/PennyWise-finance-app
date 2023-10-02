@@ -39,7 +39,7 @@ export function DailyChallenges() {
                 </ListItemSuffix>
             </ListItem>
             <ListItem className="text-off-white hover:bg-gray-800 hover:text-emerald font-semibold focus:bg-dark-green focus:text-off-white" >
-                <Italic>Complete all of these challenges to earn a special reward!</Italic>
+                <Italic>Complete all of these challenges to earn special rewards!</Italic>
             </ListItem>
         </List>
     )
