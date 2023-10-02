@@ -1,7 +1,6 @@
 import { Card } from "@material-tailwind/react"
 import { FeaturedRew } from "./FeaturedRew"
-import { PointRewards } from "./PointRewards"
-import { StreakRewards } from "./StreakRewards"
+
 import { GiLaurelsTrophy as Prize } from "react-icons/gi"
 import {
     Tabs,
@@ -32,9 +31,8 @@ export function Rewards() {
           desc: `Complete streaks to get rewards`,
           icon: <Streak /> ,
         },
-     
-       
       ];
+    
     return(
         <main className="bg-rich-black text-off-white h-full 
         flex flex-col items-center justify-center gap-8">
@@ -73,7 +71,7 @@ export function Rewards() {
           <TabPanel className='text-off-white bg-rich-black text-lg font-main font-normal flex flex-col h-screen my-auto items-center' key={value} value={value}>
             {desc}
             <Card className="w-96 overflow-hidden rounded-md bg-rich-black">
-      <List className="my-5 font-display ">
+        <List className="my-5 font-display ">
         <ListItem className="hover:bg-gray-800 hover:text-emerald 
                                             text-off-white focus:bg-dark-green focus:text-off-white 
                                             h-16">
@@ -84,7 +82,7 @@ export function Rewards() {
           <ListItemSuffix>
             <Chip
               value="-50"
-              variant="ghost"
+              variant="gradient"
               size="sm"
               className="rounded-full px-2 py-1 text-xs group-hover:bg-white/20 group-hover:text-white"
               color="green"
@@ -101,9 +99,10 @@ export function Rewards() {
           <ListItemSuffix>
             <Chip
               value="-50"
-              variant="ghost"
+              variant="gradient"
               size="sm"
               className="rounded-full px-2 py-1 text-xs group-hover:bg-white/20 group-hover:text-white"
+              color="green"
             />
           </ListItemSuffix>
         </ListItem>
@@ -118,9 +117,10 @@ export function Rewards() {
           <ListItemSuffix>
             <Chip
               value="-50"
-              variant="ghost"
+              variant="gradient"
               size="sm"
               className="rounded-full px-2 py-1 text-xs group-hover:bg-white/20 group-hover:text-white"
+              color="green"
             />
           </ListItemSuffix>
         </ListItem>
