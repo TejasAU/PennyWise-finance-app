@@ -9,34 +9,10 @@ import {
     TabsHeaderProps
 } from "@material-tailwind/react";
 import { Card } from '@material-tailwind/react';
+import { data } from './ChallengeData';
 
 export function AllChallenges() {
-    const data = [
-        {
-          label: "Easy",
-          value: "easy",
-          icon: EasyIcon,
-          desc: `Easy challenges are listed here. They are designed to be completed by
-          minimal interaction or first-time users`,
-        },
-        {
-          label: "Medium",
-          value: "medium",
-          icon: MediumIcon,
-          desc: `Medium challenges are listed here. They are designed to be completed by
-          continuous interaction or normal users`,
-        },
-        {
-          label: "Hard",
-          value: "hard",
-          icon: HardIcon,
-          desc: `Hard challenges are listed here. They are designed to be completed by
-          loyal and long-time users`,
-        },
-      ] 
-    
-    
-    
+
     return(
         <main className="bg-rich-black text-off-white h-full 
         flex flex-col items-center justify-center gap-8">

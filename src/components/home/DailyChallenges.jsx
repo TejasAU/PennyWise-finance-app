@@ -15,7 +15,7 @@ export function DailyChallenges() {
                 <ListItemPrefix>
                     <ChallengeIcon />
                 </ListItemPrefix>
-                This is your daily challenge 1
+                Open the app and spend a minute reviewing your financial snapshot on the Home tab.
                 <ListItemSuffix>
                     <Chip value='+110' variant="gradient" color="amber" className="rounded-full"></Chip>
                 </ListItemSuffix>
@@ -24,7 +24,7 @@ export function DailyChallenges() {
                 <ListItemPrefix>
                     <ChallengeIcon />
                 </ListItemPrefix>
-                This is your daily challenge 2
+                Check your daily spending against your budget goals in the Analytics tab to stay on track.
                 <ListItemSuffix>
                     <Chip value='+250' variant="gradient" color="amber" className="rounded-full"></Chip>
                 </ListItemSuffix>
@@ -33,7 +33,7 @@ export function DailyChallenges() {
                 <ListItemPrefix>
                     <ChallengeIcon />
                 </ListItemPrefix>
-                This is your daily challenge 3
+                Maintain a daily streak of completing challenges from the Challenges tab. Aim for a 7-day streak!
                 <ListItemSuffix>
                     <Chip value='+50' variant="gradient" color="amber" className="rounded-full"></Chip>
                 </ListItemSuffix>
