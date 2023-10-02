@@ -9,10 +9,10 @@ import { GiReceiveMoney as AppLogo } from 'react-icons/gi'
 export function Sidebar() { 
     return(
             <div
-                className="w-full h-full max-w-[20rem] p-1    
+                className="w-full h-[100vh] max-w-[20rem] p-1    
                 shadow-sm shadow-off-white bg-navy-blue
                 ease-in-out duration-200 text-lg text-emerald 
-                rounded-none sticky top-0"
+                rounded-none sticky top-0 left-0"
             >
                 <div className="flex items-center gap-4 mb-2 p-4 text-3xl 
                 font-appname font-extrabold ">  
