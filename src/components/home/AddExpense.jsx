@@ -4,7 +4,7 @@ import { useState } from "react"
 import { GiWallet as Expense } from 'react-icons/gi'
 
 export function AddExpense() {
-    const [ showAlert, setShowAlert ] = useState(true)
+    const [ showAlert, setShowAlert ] = useState(false)
     
     return(
         <div className="flex items-center justify-evenly gap-8">
@@ -13,7 +13,7 @@ export function AddExpense() {
                 <Alert
                     open={showAlert}
                     onClose={() => setShowAlert(false)}
-                    className="flex flex-row w-[30vw] fixed top-[3.8rem] right-0 bg-emerald/70"
+                    className="flex flex-row w-[30vw] fixed top-[3.8rem] right-[16rem] bg-emerald/70"
                 >
                     <div className="text-off-white">Expense Added!</div>
                 </Alert>
