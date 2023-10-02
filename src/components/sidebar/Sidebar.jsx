@@ -1,16 +1,12 @@
-import { Card, List, ListItem, ListItemPrefix } from "@material-tailwind/react"
-import { useContext } from "react"
-import { AppContext } from "../../App"
+import { Card, List, ListItem, ListItemPrefix, Typography } from "@material-tailwind/react"
 import { FiTag as Tag, FiHome as Home } from 'react-icons/fi' 
 import { TbCategory as Category, TbDeviceDesktopAnalytics as Analytics } from 'react-icons/tb'
 import { BsListTask as Challenge } from 'react-icons/bs'
 import { Link } from "react-router-dom"
-import { IconButton } from "@material-tailwind/react";
+import { GiReceiveMoney as AppLogo } from 'react-icons/gi'
 
-export function Sidebar() {
-    
-    const { isMounted } = useContext(AppContext)
-    
+
+export function Sidebar() { 
     return(
             <Card 
                 className="w-full max-w-[20rem] p-1    
@@ -18,14 +14,12 @@ export function Sidebar() {
                 ease-in-out duration-200 text-lg text-emerald 
                 rounded-none"
             >
-                <div className="content-center flex flex-row mb-2 p-4 text-3xl font-appname font-extrabold ">
-                    
-                    <IconButton size="lg">
-                    <img src="src\assets\logo.png" />
-                    </IconButton>
-                    
-                    PennyWise
-                    
+                <div className="flex items-center gap-4 mb-2 p-4 text-3xl 
+                font-appname font-extrabold ">  
+                    <AppLogo className="pb-1"/>
+                    <div>
+                        Pennywise
+                    </div>
                 </div>
                 <List className="text-emerald">
                     <Link to='/home'>
