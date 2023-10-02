@@ -8,10 +8,17 @@ import {
 
 import { useContext } from "react";
 import { AppContext } from "../../App";
+import { useNavigate } from "react-router-dom";
   
   export function SimpleRegistrationForm() {
-    const { setIsNewUser } = useContext(AppContext)
-    
+    const { setIsAuth, setIsNewUser } = useContext(AppContext)
+    const navigate = useNavigate()
+
+    function handleLogin() {
+      setIsAuth(true)
+      navigate("/home")
+    }
+
     return (
       <main className="bg-rich-black text-off-white h-full flex items-center justify-center">
             
@@ -31,7 +38,7 @@ import { AppContext } from "../../App";
           <Input type="password" size="lg" label="Enter Password Again" />
         </div>
         
-        <Button className="mt-6" fullWidth onClick={ () => setIsAuth(true)}>
+        <Button className="mt-6" fullWidth onClick={ () => handleLogin()}>
         
           Register
         </Button >
