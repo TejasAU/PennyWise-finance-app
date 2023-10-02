@@ -8,7 +8,7 @@ export function UserDetails() {
                     className="col-span-6 row-span-1 text-md p-4 text-off-white bg-navy-blue
                     hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green m-20 text-center text-4xl"
                 >
-                    Welcome Jhon!!
+                    Welcome John!!
                 </Card>
             </div>
             <div className="grid grid-cols-2 gap-10 m-20">

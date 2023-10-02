@@ -2,11 +2,19 @@ import { useContext } from "react"
 import { AppContext } from "../../App"
 // import { Button } from "@material-tailwind/react"
 import { Card,Input,Checkbox,Button,Typography, } from "@material-tailwind/react";
+import { useNavigate } from "react-router-dom";
 
 
 export function Login() {
     const { setIsAuth, setIsNewUser } = useContext(AppContext)
-    
+    const navigate = useNavigate()
+
+
+    function handleLogin() {
+      setIsAuth(true)
+      navigate("/home")
+    }
+
     return(
         <main className="bg-rich-black text-off-white h-full flex items-center justify-center">
             
@@ -25,7 +33,7 @@ export function Login() {
           <Input type="password" size="lg" label="Password" />
         </div>
         
-        <Button className="mt-6" fullWidth onClick={ () => setIsAuth(true)}>
+        <Button className="mt-6" fullWidth onClick={ () =>  handleLogin()}>
           Login
         </Button >
         <Typography color="gray" className="mt-4 text-center font-normal">
