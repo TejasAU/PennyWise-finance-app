@@ -32,10 +32,10 @@ import { useNavigate } from "react-router-dom";
       </Typography>
       <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
         <div className="mb-4 flex flex-col gap-6">
-          <Input size="lg" label="Name" />
-          <Input size="lg" label="Email" />
-          <Input type="password" size="lg" label="Password" />
-          <Input type="password" size="lg" label="Enter Password Again" />
+          <Input size="lg" color = "white"label="Name" />
+          <Input size="lg" color = "white" label="Email" />
+          <Input type="password" color = "white"size="lg" label="Password" />
+          <Input type="password" color = "white"size="lg" label="Enter Password Again" />
         </div>
         
         <Button className="mt-6" fullWidth onClick={ () => handleLogin()}>
