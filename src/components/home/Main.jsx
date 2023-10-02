@@ -8,7 +8,7 @@ import { AddExpense } from "./AddExpense";
 export function Main() {
     
     return(
-        <main className= "bg-rich-black">
+        <main className= "bg-rich-black h-full">
             
             <div className="grid grid-cols-3 grid-rows-[repeat(7,5rem)] gap-8 m-20">    
             
