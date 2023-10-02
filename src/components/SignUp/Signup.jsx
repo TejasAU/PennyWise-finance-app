@@ -5,8 +5,13 @@ import {
     Button,
     Typography,
   } from "@material-tailwind/react";
-   
+
+import { useContext } from "react";
+import { AppContext } from "../../App";
+  
   export function SimpleRegistrationForm() {
+    const { setIsNewUser } = useContext(AppContext)
+    
     return (
       <main className="bg-rich-black text-off-white h-full flex items-center justify-center">
             
@@ -32,9 +37,9 @@ import {
         </Button >
         <Typography color="gray" className="mt-4 text-center font-normal">
           Already have an account?{" "}
-          <a href="#" className="font-medium text-emerald-50">
+          <Button className="mt-6" fullWidth onClick={ () => setIsNewUser(false)}>
             <Typography color="green">Log in</Typography>
-          </a>
+          </Button>
         </Typography>
       </form>
     </Card>

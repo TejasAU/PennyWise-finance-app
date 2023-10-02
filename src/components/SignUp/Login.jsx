@@ -4,15 +4,14 @@ import { AppContext } from "../../App"
 import { Card,Input,Checkbox,Button,Typography, } from "@material-tailwind/react";
 
 
-
 export function Login() {
-    const { setIsAuth } = useContext(AppContext)
-
+    const { setIsAuth, setIsNewUser } = useContext(AppContext)
+    
     return(
         <main className="bg-rich-black text-off-white h-full flex items-center justify-center">
             
             
-            <Card color="transparent" shadow={false}>
+      <Card color="transparent" shadow={false}>
       <Typography variant="h4" color="green" className="flex items-center justify-center">
         Welcome Back!!
       </Typography>
@@ -27,14 +26,13 @@ export function Login() {
         </div>
         
         <Button className="mt-6" fullWidth onClick={ () => setIsAuth(true)}>
-        
           Login
         </Button >
         <Typography color="gray" className="mt-4 text-center font-normal">
           Make a new account?{" "}
-          <a href="#" className="font-medium text-emerald-50">
+          <Button className="mt-6" fullWidth onClick={ () => setIsNewUser(true)}>
             <Typography color="green">Sign Up</Typography>
-          </a>
+          </Button >
         </Typography>
       </form>
     </Card>
