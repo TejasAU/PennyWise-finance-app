@@ -31,7 +31,6 @@ export function AllChallenges() {
                 your financial goals, and earn rewards in the form of coins.
             </Card>
             <Tabs value="dashboard" className='h-3/5 w-4/5'>
-                
                 <TabsHeader 
                     className='bg-transparent h-14'
                     indicatorProps={{
@@ -53,12 +52,7 @@ export function AllChallenges() {
                     ))}
                 </TabsHeader>
 
-                <TabsBody className='h-full border-b border-emerald/30 rounded-md' 
-                    animate={{
-                        initial: { y: 250 },
-                        mount: { y: 0 },
-                        unmount: { y: 250 },
-                }}>
+                <TabsBody className='h-full border-b border-emerald/30 rounded-md'>
                     {challengesData.map( 
                         ({ value, desc }) => (
                             <TabPanel key={value} value={value} 

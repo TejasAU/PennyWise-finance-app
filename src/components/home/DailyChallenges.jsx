@@ -10,7 +10,7 @@ import { GiAbstract020 as ChallengeIcon } from "react-icons/gi"
 
 export function DailyChallenges() {
     return(
-        <List className="my-5 font-display">
+        <List className="mt-4 font-display">
             <ListItem className="hover:bg-gray-800 hover:text-emerald text-off-white focus:bg-dark-green focus:text-off-white">
                 <ListItemPrefix>
                     <ChallengeIcon />
