@@ -8,7 +8,7 @@ import {
     TabPanel,
     TabsHeaderProps
 } from "@material-tailwind/react";
-import { Card } from 'flowbite-react';
+import { Card } from '@material-tailwind/react';
 
 export function AllChallenges() {
     const data = [
@@ -40,8 +40,8 @@ export function AllChallenges() {
     return(
         <main className="bg-rich-black text-off-white h-full 
         flex flex-col items-center justify-center gap-8">
-            <Card className='text-xl text-off-white p-4 bg-navy-blue
-                transition-shadow duration-300 w-4/5
+            <Card className='text-xl text-off-white p-10 bg-navy-blue
+                transition-shadow duration-300 w-4/5 
                 hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green'>
                 Challenges are a fun and interactive way to supercharge 
                 your financial journey. Whether you're a money-saving beginner or a seasoned
