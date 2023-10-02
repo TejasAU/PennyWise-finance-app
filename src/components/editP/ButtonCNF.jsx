@@ -21,7 +21,7 @@ export function ButtonCNF() {
                 <Button onClick={handleOpen}>Confirm</Button>
                 <Dialog open={open} handler={handleOpen}>
                     <div className="flex items-center justify-between">
-                        <DialogHeader>Confirm Profile</DialogHeader>
+                        <DialogHeader>Confirm Changes?</DialogHeader>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -38,7 +38,7 @@ export function ButtonCNF() {
                     </div>
                     <DialogBody divider>
                         <div className="grid gap-6">
-                            <Input label="Confirm" />
+                            <Input label="Enter Password" />
                             {/* <Textarea label="Message" /> */}
                         </div>
                     </DialogBody>
