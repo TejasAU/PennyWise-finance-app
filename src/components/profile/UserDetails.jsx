@@ -11,7 +11,7 @@ export function UserDetails() {
                     Welcome Jhon!!
                 </Card>
             </div>
-            <div className="grid grid-cols-2 grid-rows-[repeat(5,7rem)] gap-10 m-20">
+            <div className="grid grid-cols-2 gap-10 m-20">
                 <Card 
                     className="text-xl p-4 text-center
                     text-off-white bg-navy-blue

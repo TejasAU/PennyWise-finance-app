@@ -75,12 +75,14 @@ export function Profile() {
                     </Link>
                 </MenuItem>
                 <MenuItem className='py-2'>
-                    <Typography 
-                        variant='small' className='font-main font-semibold flex items-center gap-4'
-                    >
-                        <UserEdit className='h-5 w-5'/>
-                        Edit Profile
-                    </Typography>
+                    <Link to='/editP'>
+                        <Typography 
+                            variant='small' className='font-main font-semibold flex items-center gap-4'
+                        >
+                            <UserEdit className='h-5 w-5'/>
+                            Edit Profile
+                        </Typography>
+                    </Link>
                 </MenuItem> 
                 <hr className="my-1" />
                 <MenuItem className='py-2 text-red-600' onClick={() => setIsAuth(false)}>

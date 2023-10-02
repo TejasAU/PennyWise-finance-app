@@ -12,6 +12,7 @@ import { ProfileDetails } from './components/profile/ProfileDetails.jsx'
 import { Rewards } from './components/rewards/Rewards.jsx'
 import { Analytics } from './components/analytics/Analytics.jsx'
 import { AllChallenges } from './components/challenges/AllChallenges.jsx'
+import { EditProfile } from './components/editP/EditProfile.jsx'
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfileDetails />
+      },
+      {
+        path: "/editP",
+        element: <EditProfile />
       }
     ]
   } 
