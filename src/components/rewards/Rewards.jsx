@@ -39,10 +39,8 @@ export function Rewards() {
     <main className="h-full bg-rich-black">
       <div className='bg-rich-black text-off-white h-screen
         flex flex-col items-center justify-center gap-8'>
-
-        How To Earn Rewards
         <Card className='text-xl text-off-white p-10 bg-navy-blue
-                transition-shadow duration-300 w-4/5 
+                transition-shadow duration-300 w-4/5 h-3/5 mt-6
                 hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green'>
           <FeaturedRew />
         </Card>
