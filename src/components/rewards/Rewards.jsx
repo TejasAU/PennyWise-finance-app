@@ -36,7 +36,7 @@ export function Rewards() {
   ];
 
   return (
-    <main>
+    <main className="h-full bg-rich-black">
       <div className='bg-rich-black text-off-white h-screen
         flex flex-col items-center justify-center gap-8'>
 
