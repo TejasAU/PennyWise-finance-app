@@ -10,22 +10,13 @@ export function Main() {
     return(
         <main className= "bg-rich-black h-full">
             
-            <div className="grid grid-cols-3 grid-rows-[repeat(7,5rem)] gap-8 m-20">    
+            <div className="grid grid-cols-3 grid-rows-[repeat(7,6rem)] gap-8 m-20">    
             
                 <Card 
                     className="text-xl text-off-white p-4 
                     bg-gradient-to-r from-dark-green to-navy-blue 
                     row-span-2 overflow-scroll"
                 >
-                    {/* <div className=" animation: spin 3s linear infinite;
-                                        @keyframes spin {
-                                            from {
-                                                transform: rotate(0deg);
-                                                }
-                                            to {
-                                            transform: rotate(360deg);
-                                        }
-                                    }"><img src="src\assets\output-onlinegiftools.gif"></img></div> */}
                     Welcome, John!<br />Let's take a gander at your expenses!   
                 </Card>
                 <Card

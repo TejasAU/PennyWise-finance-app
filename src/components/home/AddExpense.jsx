@@ -21,17 +21,20 @@ export function AddExpense() {
             </div>
             <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
                 <div className="mb-4 grid grid-cols-2 grid-rows-2 gap-x-16 gap-y-4">
-                <Select variant="static" label="Type" color="white"
-                        className="text-emerald"
-                        menuProps={{
-                            className: 'bg-navy-blue text-emerald'
-                        }}
-                        labelProps={{
-                            className: 'text-emerald'
-                        }}
-                        >
-                        <Option className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white text-[0.9rem] 
+                <Select 
+                    variant="static" 
+                    label="Type" 
+                    color="white"
+                    className="text-emerald"
+                    menuProps={{
+                        className: 'bg-navy-blue text-emerald'
+                    }}
+                    labelProps={{
+                        className: 'text-emerald'
+                    }}
+                >
+                        <Option className="hover:bg-dark-green hover:text-off-white
+                            focus:bg-dark-green focus:text-off-white text-[0.9rem]
                             font-main font-normal"
                         >
                             Income
@@ -46,7 +49,7 @@ export function AddExpense() {
                     <Select variant="static" label="Category" color="white"
                         className="text-emerald"
                         menuProps={{
-                            className: 'bg-navy-blue text-emerald'
+                            className: 'bg-navy-blue border-r-0 text-emerald max-h-[100px]'
                         }}
                         labelProps={{
                             className: 'text-emerald'
