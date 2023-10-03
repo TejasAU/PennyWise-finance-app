@@ -24,38 +24,58 @@ export function AddExpense() {
     }
 
     return(
-        <form className="flex flex-col gap-8 mt-8 w-full">
+        <form className="flex flex-col gap-8 mt-8 w-full font-main font-normal">
             <div className="flex justify-center items-center gap-8">
                 <div className="basis-1/6">
                     <Select 
-                        label="Select Version" 
-                        className="w-full"
+                        label="Select Type" 
+                        className="w-full font-main font-normal text-emerald"
                         color="green"
+                        menuProps={{
+                            className: 'bg-navy-blue text-emerald'
+                        }}
+                        labelProps={{
+                            className: 'font-main font-bold'
+                        }}
                     >
-                        <Option>Material Tailwind HTML</Option>
-                        <Option>Material Tailwind React</Option>
-                        <Option>Material Tailwind Vue</Option>
-                        <Option>Material Tailwind Angular</Option>
-                        <Option>Material Tailwind Svelte</Option>
+                        <Option>Income</Option>
+                        <Option>Expense</Option>
                     </Select>
                 </div>
                 <div className="basis-1/6">
-                    <Select label="Select Version" className="w-full" color="green">
-                        <Option>Material Tailwind HTML</Option>
-                        <Option>Material Tailwind React</Option>
-                        <Option>Material Tailwind Vue</Option>
-                        <Option>Material Tailwind Angular</Option>
-                        <Option>Material Tailwind Svelte</Option>
+                    <Select 
+                        label="Select Category" 
+                        className="w-full font-main font-normal text-emerald"
+                        color="green"
+                        menuProps={{
+                            className: 'bg-navy-blue text-emerald max-h-[100px]'
+                        }}
+                        labelProps={{
+                            className: 'font-main font-bold'
+                        }}
+                    >
+                        <Option>Food</Option>
+                        <Option>Transport</Option>
+                        <Option>Entertainment</Option>
                     </Select>
                 </div>
-                <div className="basis-1/6">
-                    <Input label="Amount" className="w-full"/>
+                <div className="basis-1/6 flex flex-col justify-center">
+                    <Input
+                        label="Amount"
+                        onBlur={(event) => event.target.placeholder = ""}
+                        onFocus={(event) => event.target.placeholder="Enter in ₹"}
+                        className="w-full font-main font-normal text-emerald" 
+                        color="green"
+                        labelProps={{
+                            className: 'text-lg font-main font-bold'
+                        }}
+                    />
                 </div>
             </div>
             <div className="grow-1 flex items-center justify-center">
                 <Button 
-                    className="p-4 border border-emerald hover:bg-emerald hover:text-off-white
-                    font-main font-semibold text-emerald"
+                    className="p-4 border border-dark-green hover:bg-dark-green hover:text-off-white
+                    font-main font-bold text-emerald"
                 >
                     Add Expense
                 </Button>

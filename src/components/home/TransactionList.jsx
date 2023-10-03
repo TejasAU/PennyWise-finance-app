@@ -2,16 +2,18 @@ import {
     Typography
 } from '@material-tailwind/react'
 
-const tableHeadings = ["Transaction", "Amount", "Date"]
+const tableHeadings = ["Category", "Type", "Amount", "Date"]
 
 const tableData = [
     {
-        vendorName: "Amazon",
+        category: "Food",
+        type: "Expense",
         amount: "Rs 1,000",
         date: "24-Sep 8:02AM"
     },
     {
-        vendorName: "Swiggy",
+        category: "Tranport",
+        type: "Expense",
         amount: "Rs 200",
         date: "26-Sep 8:02AM"
     }
@@ -43,17 +45,23 @@ export function TransactionList() {
                 {tableData.map(
                     (
                         {
-                            vendorName,
+                            category,
+                            type,
                             amount,
                             date
                         }
                     ) => {
                         const styleClass = "border-none bg-navy-blue px-2 py-3"
                         return (
-                            <tr key={vendorName}>
+                            <tr key={category}>
                                 <td className={styleClass}>
                                     <Typography className="text-off-white text-sm">
-                                        {vendorName}
+                                        {category}
+                                    </Typography>
+                                </td>
+                                <td className={styleClass}>
+                                    <Typography className="text-off-white text-sm">
+                                        {type}
                                     </Typography>
                                 </td>
                                 <td className={styleClass}>

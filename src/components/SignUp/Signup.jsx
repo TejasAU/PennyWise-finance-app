@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
     }
 
     return (
-      <main className="bg-rich-black text-off-white h-full flex items-center justify-center">
+      <main className="bg-rich-black text-off-white h-[100vh] flex items-center justify-center">
             
             
             <Card color="transparent" shadow={false}>

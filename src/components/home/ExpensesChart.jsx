@@ -34,7 +34,7 @@ export function ExpensesChart() {
                     valueFormatter={valueFormatter}
             />
             <Legend
-                className="mt-3 m"
+                className="mt-3 h-1/5"
                 // TODO get dynamically from data
                 categories={["Food","Transport","Entertainment"]}
                 // TODO generate random color array
