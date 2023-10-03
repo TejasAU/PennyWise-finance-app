@@ -24,6 +24,7 @@ export function Main() {
                     col-start-2 col-span-2 row-span-2 transition-shadow duration-300
                     hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green font-display overflow-scroll"
                 >
+                    Add a Transaction
                     <AddExpense />
                 </Card> 
                 <Card 

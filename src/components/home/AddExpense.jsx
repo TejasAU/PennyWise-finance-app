@@ -1,104 +1,65 @@
-import { Button, Input, Select, Option, Radio } from "@material-tailwind/react"
+import { Button, Input, Select, Option, Radio, Typography } from "@material-tailwind/react"
 import { Alert } from "@material-tailwind/react"
 import { useState } from "react"
 import { GiWallet as Expense } from 'react-icons/gi'
+/* For form input validation */
+import * as yup from 'yup'
+import { useForm } from "react-hook-form"
+/* Integrating schema with useForm hook */
+import { yupResolver } from "@hookform/resolvers/yup"
 
 export function AddExpense() {
     const [ showAlert, setShowAlert ] = useState(false)
     
+    const schema = yup.object().shape({
+        amount: yup.number("Please enter a number").positive("Amount should be positive")
+    })
+
+    const { register, handleSubmit, formState: {errors} } = useForm({
+        resolver: yupResolver(schema),
+    })
+
+    const onSubmit = (data) => {
+        console.log(data)
+    }
+
     return(
-        <div className="flex items-center justify-evenly gap-8">
-            <div className="text-off-white bg-navy-blue font-display
-            flex items-center justify-center">
-                <Alert
-                    open={showAlert}
-                    onClose={() => setShowAlert(false)}
-                    className="flex flex-row w-[30vw] fixed top-[3.8rem] right-[16rem] bg-emerald/70"
-                >
-                    <div className="text-off-white">Expense Added!</div>
-                </Alert>
-                Add A New Expense
-            </div>
-            <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
-                <div className="mb-4 grid grid-cols-2 grid-rows-2 gap-x-16 gap-y-4">
-                <Select 
-                    variant="static" 
-                    label="Type" 
-                    color="white"
-                    className="text-emerald"
-                    menuProps={{
-                        className: 'bg-navy-blue text-emerald'
-                    }}
-                    labelProps={{
-                        className: 'text-emerald'
-                    }}
-                >
-                        <Option className="hover:bg-dark-green hover:text-off-white
-                            focus:bg-dark-green focus:text-off-white text-[0.9rem]
-                            font-main font-normal"
-                        >
-                            Income
-                        </Option>
-                        <Option className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white text-[0.9rem] 
-                            font-main font-normal"
-                        >
-                            Expense
-                        </Option>
-                    </Select>
-                    <Select variant="static" label="Category" color="white"
-                        className="text-emerald"
-                        menuProps={{
-                            className: 'bg-navy-blue border-r-0 text-emerald max-h-[100px]'
-                        }}
-                        labelProps={{
-                            className: 'text-emerald'
-                        }}
-                        >
-                        <Option className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white text-[0.9rem] 
-                            font-main font-normal"
-                        >
-                            Food
-                        </Option>
-                        <Option className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white text-[0.9rem] 
-                            font-main font-normal"
-                        >
-                            Transport
-                        </Option>
-                        <Option className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white text-[0.9rem] 
-                            font-main font-normal"
-                        >
-                            Entertainment
-                        </Option>
-                        <Option className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white text-[0.9rem] 
-                            font-main font-normal"
-                        >
-                            Miscelleonus
-                        </Option>
-                    </Select>
-                    <Input label="Amount" color="white"
-                        labelProps = {{
-                            className: 'text-emerald'
-                        }}
-                        containerProps={{
-                            className: 'text-emerald'
-                        }}
+        <form className="flex flex-col gap-8 mt-8 w-full">
+            <div className="flex justify-center items-center gap-8">
+                <div className="basis-1/6">
+                    <Select 
+                        label="Select Version" 
                         className="w-full"
-                    />
-                    <div className="flex items-center justify-center">
-                        <Button className="border-2 border-emerald text-emerald p-4
-                        font-main font-extrabold"
-                        onClick={ () => setShowAlert(true)}
-                        >
-                            Add Expense
-                        </Button>
-                    </div>
+                        color="green"
+                    >
+                        <Option>Material Tailwind HTML</Option>
+                        <Option>Material Tailwind React</Option>
+                        <Option>Material Tailwind Vue</Option>
+                        <Option>Material Tailwind Angular</Option>
+                        <Option>Material Tailwind Svelte</Option>
+                    </Select>
                 </div>
-            </form> 
-        </div> 
+                <div className="basis-1/6">
+                    <Select label="Select Version" className="w-full" color="green">
+                        <Option>Material Tailwind HTML</Option>
+                        <Option>Material Tailwind React</Option>
+                        <Option>Material Tailwind Vue</Option>
+                        <Option>Material Tailwind Angular</Option>
+                        <Option>Material Tailwind Svelte</Option>
+                    </Select>
+                </div>
+                <div className="basis-1/6">
+                    <Input label="Amount" className="w-full"/>
+                </div>
+            </div>
+            <div className="grow-1 flex items-center justify-center">
+                <Button 
+                    className="p-4 border border-emerald hover:bg-emerald hover:text-off-white
+                    font-main font-semibold text-emerald"
+                >
+                    Add Expense
+                </Button>
+            </div>
+        </form> 
     )
 }
