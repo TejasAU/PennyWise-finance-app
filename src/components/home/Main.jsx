@@ -4,9 +4,24 @@ import { ExpensesChart } from "./ExpensesChart";
 import { DailyChallenges } from "./DailyChallenges";
 import { TransactionList } from "./TransactionList";
 import { AddExpense } from "./AddExpense";
+import { useState } from "react";
 
 export function Main() {
-    
+    const [tableData, setTableData] = useState([
+        {
+            category: "Food",
+            type: "Expense",
+            amount: "Rs 1000",
+            date: "Thu Sep 24 2023"
+        },
+        {
+            category: "Tranport",
+            type: "Expense",
+            amount: "Rs 200",
+            date: "Fri Sep 26 2023"
+        }
+    ])
+
     return(
         <main className= "bg-rich-black h-full">
             
@@ -27,7 +42,7 @@ export function Main() {
                     hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green font-display overflow-scroll"
                 >
                     Add a Transaction
-                    <AddExpense />
+                    <AddExpense tableData={tableData} setTableData={setTableData} />
                 </Card> 
                 <Card 
                     className="text-xl p-4 text-off-white  bg-navy-blue
@@ -43,7 +58,7 @@ export function Main() {
                     hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green font-display overflow-scroll"
                 >
                     Recent Transactions
-                    <TransactionList />
+                    <TransactionList tableData={tableData} />
                 </Card>
                 <Card 
                     className="text-xl text-off-white p-4 bg-navy-blue

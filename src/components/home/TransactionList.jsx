@@ -4,23 +4,7 @@ import {
 
 const tableHeadings = ["Category", "Type", "Amount", "Date"]
 
-const tableData = [
-    {
-        category: "Food",
-        type: "Expense",
-        amount: "Rs 1,000",
-        date: "24-Sep 8:02AM"
-    },
-    {
-        category: "Tranport",
-        type: "Expense",
-        amount: "Rs 200",
-        date: "26-Sep 8:02AM"
-    }
-]
-
-
-export function TransactionList() {
+export function TransactionList(props) {
     return (
         <table className="w-full min-w-max table-auto text-left">
             <thead>
@@ -42,7 +26,7 @@ export function TransactionList() {
                 </tr>
             </thead>
             <tbody>
-                {tableData.map(
+                {props.tableData.map(
                     (
                         {
                             category,

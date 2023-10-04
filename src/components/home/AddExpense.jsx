@@ -8,26 +8,39 @@ import { useForm } from "react-hook-form"
 /* Integrating schema with useForm hook */
 import { yupResolver } from "@hookform/resolvers/yup"
 
-export function AddExpense() {
+export function AddExpense(props) {
     const [ showAlert, setShowAlert ] = useState(false)
-    
+
     const schema = yup.object().shape({
-        amount: yup.number("Please enter a number").positive("Amount should be positive")
+        type: yup.string(),
+        category: yup.string(),
+        amount: yup.number(),
     })
 
-    const { register, handleSubmit, formState: {errors} } = useForm({
+    const { register, handleSubmit, setValue, formState: {errors} } = useForm({
+        mode: "onChange",
         resolver: yupResolver(schema),
     })
 
     const onSubmit = (data) => {
-        console.log(data)
+        props.setTableData([...props.tableData,{
+            category: data.category,
+            type: data.type,
+            amount: `Rs. ${data.amount}`,
+            date: new Date().toDateString(),
+        }])
     }
 
     return(
-        <form className="flex flex-col gap-8 mt-8 w-full font-main font-normal">
+        <form 
+            className="flex flex-col gap-8 mt-8 w-full font-main font-normal"
+            onSubmit={handleSubmit(onSubmit)}
+        >
             <div className="flex justify-center items-center gap-8">
                 <div className="basis-1/6">
-                    <Select 
+                    <Select
+                        {...register("type")}
+                        onChange={(e) => setValue('type', e, { shouldValidate: true })}
                         label="Select Type" 
                         className="w-full font-main font-normal text-emerald"
                         color="green"
@@ -38,12 +51,14 @@ export function AddExpense() {
                             className: 'font-main font-bold'
                         }}
                     >
-                        <Option>Income</Option>
-                        <Option>Expense</Option>
+                        <Option value="Income" defau>Income</Option>
+                        <Option value="Expense">Expense</Option>
                     </Select>
                 </div>
                 <div className="basis-1/6">
                     <Select 
+                        {...register("category")}
+                        onChange={(e) => setValue('category', e, { shouldValidate: true })}
                         label="Select Category" 
                         className="w-full font-main font-normal text-emerald"
                         color="green"
@@ -54,17 +69,19 @@ export function AddExpense() {
                             className: 'font-main font-bold'
                         }}
                     >
-                        <Option>Food</Option>
-                        <Option>Transport</Option>
-                        <Option>Entertainment</Option>
+                        <Option value="Food">Food</Option>
+                        <Option value="Transport">Transport</Option>
+                        <Option value="Entertainment">Entertainment</Option>
                     </Select>
                 </div>
                 <div className="basis-1/6 flex flex-col justify-center">
                     <Input
+                        {...register("amount")}
                         label="Amount"
+                        type="number"
                         onBlur={(event) => event.target.placeholder = ""}
                         onFocus={(event) => event.target.placeholder="Enter in ₹"}
-                        className="w-full font-main font-normal text-emerald" 
+                        className="w-full font-main font-normal text-emerald focus:shadow-none" 
                         color="green"
                         labelProps={{
                             className: 'text-lg font-main font-bold'
@@ -73,9 +90,23 @@ export function AddExpense() {
                 </div>
             </div>
             <div className="grow-1 flex items-center justify-center">
+                <Alert
+                    open={showAlert}
+                    className="absolute top-0 right-0 bg-dark-green text-off-white"
+                    onClose={ () => setShowAlert(false)}
+                    animate={{
+                        mount: { y: 0 },
+                        unmount: { y: 100 },
+                    }}
+                >
+                    Expense Added!
+                </Alert>
+
                 <Button 
                     className="p-4 border border-dark-green hover:bg-dark-green hover:text-off-white
                     font-main font-bold text-emerald"
+                    onClick={ () => setShowAlert(true)}
+                    type="submit"
                 >
                     Add Expense
                 </Button>
