@@ -1,5 +1,6 @@
-import { DonutChart, Legend } from "@tremor/react";
+import { DonutChart, Legend } from "@tremor/react"
 
+/* Randomized data to populate donut chart*/
 const budgetData = [
     {
         category: 'Food',
@@ -30,15 +31,12 @@ export function ExpensesChart() {
                     showAnimation={true}
                     category="value"
                     index="category"
-                    // TODO generate random color array
                     colors={["purple","red","cyan"]}
                     valueFormatter={valueFormatter}
             />
             <Legend
                 className="mt-3 h-1/5"
-                // TODO get dynamically from data
                 categories={["Food","Transport","Entertainment"]}
-                // TODO generate random color array
                 colors={["purple","red","cyan"]}
             />
         </div>

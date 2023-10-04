@@ -1,6 +1,4 @@
-import {
-    Typography
-} from '@material-tailwind/react'
+import { Typography } from '@material-tailwind/react'
 
 const tableHeadings = ["Category", "Type", "Amount", "Date"]
 
@@ -35,6 +33,7 @@ export function TransactionList(props) {
                             date
                         }
                     ) => {
+                        /* Apply below style to all cells */
                         const styleClass = "border-none bg-navy-blue px-2 py-3"
                         return (
                             <tr key={category}>

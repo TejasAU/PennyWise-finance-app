@@ -1,6 +1,7 @@
-import { ProfilePic } from '/src/components/profile/ProfilePic.jsx';
-import { UserDetails } from '/src/components/profile/UserDetails.jsx'
+import { ProfilePic } from './ProfilePic'
+import { UserDetails } from './UserDetails'
 
+/* Parent component for My Profile Tab */
 
 export function ProfileDetails() {
     return(

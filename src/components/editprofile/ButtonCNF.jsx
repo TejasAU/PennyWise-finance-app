@@ -1,13 +1,12 @@
-import React from "react";
+import React from "react"
 import {
     Button,
     Dialog,
     DialogHeader,
     DialogBody,
     DialogFooter,
-    Input,
-    Textarea,
-} from "@material-tailwind/react";
+    Input
+} from "@material-tailwind/react"
 
 export function ButtonCNF() {
     const [open, setOpen] = React.useState(false);
@@ -39,7 +38,6 @@ export function ButtonCNF() {
                     <DialogBody divider>
                         <div className="grid gap-6">
                             <Input label="Enter Password" />
-                            {/* <Textarea label="Message" /> */}
                         </div>
                     </DialogBody>
                     <DialogFooter className="space-x-2">

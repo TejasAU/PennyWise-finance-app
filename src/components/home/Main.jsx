@@ -1,10 +1,12 @@
 import { Card, Typography } from "@material-tailwind/react"
 
-import { ExpensesChart } from "./ExpensesChart";
-import { DailyChallenges } from "./DailyChallenges";
-import { TransactionList } from "./TransactionList";
-import { AddExpense } from "./AddExpense";
-import { useState } from "react";
+import { ExpensesChart } from "./ExpensesChart"
+import { DailyChallenges } from "./DailyChallenges"
+import { TransactionList } from "./TransactionList"
+import { AddExpense } from "./AddExpense"
+import { useState } from "react"
+
+/* Parent Component for Home tab */
 
 export function Main() {
     const [tableData, setTableData] = useState([

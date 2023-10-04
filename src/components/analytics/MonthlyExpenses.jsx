@@ -1,10 +1,11 @@
-import { DonutChart, Flex, Legend } from "@tremor/react";
+import { DonutChart, Legend } from "@tremor/react"
 import { BarList } from '@tremor/react'
 
 /* Use the following colors: pink, purple, indigo, blue, cyan, teal, yellow, lime, green
     amber, orange, red and gray
 */
 
+/* Randomized data to populate donut chart*/
 const monthPieData = [
     {
         name: 'Food',
@@ -20,31 +21,26 @@ const monthPieData = [
     },
 ];
 
+/* Formatting actual value for displaying in chart tooltip */
 const valueFormatter = (number) => `Rs. ${number}`
 
-/* Use the following colors: pink, purple, indigo, blue, cyan, teal, yellow, lime, green
-    amber, orange, red and gray
-*/
 
 export function MonthlyExpenses() {
     return(
         <div className="flex gap-8 justify-center items-center basis-2/5">
             <div className="flex flex-col items-center justify-center">
                 <DonutChart
-                        showAnimation={true}
-                        className="mt-6"
-                        data={monthPieData}
-                        category="value"
-                        index="name"
-                        // TODO generate random color array
-                        colors={["purple","red","cyan"]}
-                        valueFormatter={valueFormatter}
+                    showAnimation={true}
+                    className="mt-6"
+                    data={monthPieData}
+                    category="value"
+                    index="name"
+                    colors={["purple","red","cyan"]}
+                    valueFormatter={valueFormatter}
                 />
                 <Legend
-                    className="mt-3 m"
-                    // TODO get dynamically from data
+                    className="mt-3"
                     categories={["Food","Transport","Entertainment"]}
-                    // TODO generate random color array
                     colors={["purple","red","cyan"]}
                 />
             </div>

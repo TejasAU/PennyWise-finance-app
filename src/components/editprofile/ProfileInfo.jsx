@@ -1,4 +1,7 @@
-import { Input } from "@material-tailwind/react";
+import { Input } from "@material-tailwind/react"
+
+/* Display User Profile Info */
+
 export function ProfileInfo() {
     return (
         <main class="flex flex-col items-center gap-3 m-20 h-full">

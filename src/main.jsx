@@ -1,18 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import App from './App'
 import { Main } from './components/home/Main.jsx'
 import './index.css'
 
-
 import { ThemeProvider } from '@material-tailwind/react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Budgets } from './components/budgets/Budgets.jsx'
-import { ProfileDetails } from './components/profile/ProfileDetails.jsx'
-import { Rewards } from './components/rewards/Rewards.jsx'
-import { Analytics } from './components/analytics/Analytics.jsx'
-import { AllChallenges } from './components/challenges/AllChallenges.jsx'
-import { EditProfile } from './components/editP/EditProfile.jsx'
+import { Budgets } from './components/budgets/Budgets'
+import { ProfileDetails } from './components/profile/ProfileDetails'
+import { Rewards } from './components/rewards/Rewards'
+import { Analytics } from './components/analytics/Analytics'
+import { AllChallenges } from './components/challenges/AllChallenges'
+import { EditProfile } from './components/editprofile/EditProfile'
 
 const router = createBrowserRouter([
   {
@@ -44,7 +43,7 @@ const router = createBrowserRouter([
         element: <ProfileDetails />
       },
       {
-        path: "/editP",
+        path: "/editprofile",
         element: <EditProfile />
       }
     ]

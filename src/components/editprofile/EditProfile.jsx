@@ -1,6 +1,9 @@
-import { EditProfilePic } from '/src/components/editP/EditProfilePic.jsx'
-import { ProfileInfo } from '/src/components/editP/ProfileInfo.jsx'
-import { ButtonCNF } from '/src/components/editP/ButtonCNF.jsx'
+import { EditProfilePic } from './EditProfilePic'
+import { ProfileInfo } from './ProfileInfo'
+import { ButtonCNF } from './ButtonCNF'
+
+/* Parent Component for Profile section */
+
 export function EditProfile() {
     return (
         <main className="bg-rich-black text-off-white h-full">

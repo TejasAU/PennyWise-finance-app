@@ -1,12 +1,4 @@
-import { 
-    List,
-    ListItem,
-    ListItemPrefix,
-    ListItemSuffix,
-    Chip, 
-    Typography,
-    IconButton
-} from "@material-tailwind/react";
+import { Typography, IconButton } from "@material-tailwind/react";
 import { Carousel } from "@material-tailwind/react";
 import { 
     GiAbstract020 as ChallengeIcon, 
@@ -15,6 +7,8 @@ import {
 } from "react-icons/gi"
 import { PiTarget as TargetIcon, PiFire as StreakIcon } from 'react-icons/pi'
 import { MdOutlineRedeem as RedeemIcon } from 'react-icons/md'
+
+/* Carousel display for Rewards Section */
 
 export function FeaturedRew(){
     return(
@@ -35,36 +29,36 @@ export function FeaturedRew(){
                         {new Array(length).fill("").map((_, i) => (
                         <span
                             key={i}
-                            className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                            activeIndex === i ? "w-8 bg-dark-green" : "w-4 bg-dark-green/50"
-                            }`}
+                            className={`block h-1 cursor-pointer 
+                            rounded-2xl transition-all content-[''] 
+                            ${activeIndex === i ? "w-8 bg-dark-green" : "w-4 bg-dark-green/50"}`}
                             onClick={() => setActiveIndex(i)}
                         />
                         ))}
                     </div>
                     )}
-                    prevArrow={({ handlePrev }) => (
-                        <IconButton
-                            variant="text"
-                            color="white"
-                            size="lg"
-                            onClick={handlePrev}
-                            className="!absolute top-2/4 left-4 -translate-y-2/4"
-                        >
-                            <PrevIcon className="text-emerald h-6 w-6" />
-                        </IconButton>
-                    )}
-                    nextArrow={({ handleNext }) => (
-                        <IconButton
-                            variant="text"
-                            color="white"
-                            size="lg"
-                            onClick={handleNext}
-                            className="!absolute top-2/4 !right-4 -translate-y-2/4"
-                        >
+                prevArrow={({ handlePrev }) => (
+                    <IconButton
+                        variant="text"
+                        color="white"
+                        size="lg"
+                        onClick={handlePrev}
+                        className="!absolute top-2/4 left-4 -translate-y-2/4"
+                    >
+                        <PrevIcon className="text-emerald h-6 w-6" />
+                    </IconButton>
+                )}
+                nextArrow={({ handleNext }) => (
+                    <IconButton
+                        variant="text"
+                        color="white"
+                        size="lg"
+                        onClick={handleNext}
+                        className="!absolute top-2/4 !right-4 -translate-y-2/4"
+                    >
                             <NextIcon className="text-emerald h-6 w-6" />
                     </IconButton>
-                    )}
+                )}
             >
                 <div className="flex flex-col items-center justify-center h-full gap-8">
                     <Typography variant="h3" className="!font-main !font-normal text-emerald">

@@ -10,7 +10,7 @@ import { Profile } from './Profile'
 
 export function Header() {
 
-    const { isMounted, setIsMounted} = useContext(AppContext) 
+    const { isMounted, setIsMounted } = useContext(AppContext) 
 
     return (
         <IconContext.Provider value={{ size: '1.3rem' }}>

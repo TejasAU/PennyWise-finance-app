@@ -9,13 +9,12 @@ import {
 } from '@material-tailwind/react'
 import maleProfile from '../../assets/maleProfile.jpeg'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
-import { useContext, useState } from 'react';
+import { useContext, useState } from 'react'
 import { FaRegUserCircle as User } from 'react-icons/fa'
 import { FaUserEdit as UserEdit } from 'react-icons/fa'
-import { FiPower as PowerOff } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
-import { CiLogin as LogIcon } from "react-icons/ci";
-import { AppContext } from '../../App';
+import { FiPower as PowerOff } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
+import { AppContext } from '../../App'
 
 export function Profile() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,7 +74,7 @@ export function Profile() {
                     </Link>
                 </MenuItem>
                 <MenuItem className='py-2'>
-                    <Link to='/editP'>
+                    <Link to='/editprofile'>
                         <Typography 
                             variant='small' className='font-main font-semibold flex items-center gap-4'
                         >

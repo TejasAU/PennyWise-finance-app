@@ -3,7 +3,10 @@ import { Metric } from "@tremor/react"
 import { useState } from "react"
 import { UserBudgets } from "./UserBudgets"
 
+/* Parent component for the Analytics Tab */
+
 export function Budgets() {
+    /* Randomized data to populate progress bars*/
     const [budgetData, setBudgetData] = useState([
         {
             category: 'Food',

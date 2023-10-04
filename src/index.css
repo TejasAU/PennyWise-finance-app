@@ -1,6 +1,8 @@
+/* Custom fonts for project */
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+/* Tailwind Config */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,6 +16,7 @@ div::-webkit-scrollbar {
     display: none;
 }
 
+/* Custom Scrollbar */
 html::-webkit-scrollbar,
 ul::-webkit-scrollbar {
     background-color: #0f172a;
@@ -34,6 +37,7 @@ ul::-webkit-scrollbar-thumb {
     box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
 }
 
+/* Remove default number input styling */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;

@@ -1,4 +1,4 @@
-import { Card, List, ListItem, ListItemPrefix, Typography } from "@material-tailwind/react"
+import { List, ListItem, ListItemPrefix } from "@material-tailwind/react"
 import { FiTag as Tag, FiHome as Home } from 'react-icons/fi' 
 import { TbCategory as Category, TbDeviceDesktopAnalytics as Analytics } from 'react-icons/tb'
 import { BsListTask as Challenge } from 'react-icons/bs'
@@ -25,7 +25,8 @@ export function Sidebar() {
                     <Link to='/home'>
                         <ListItem 
                             className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white h-14 mb-2 font-main font-semibold"
+                            focus:bg-dark-green focus:text-off-white h-14 mb-2 
+                            font-main font-semibold"
                         >
                             <ListItemPrefix>
                                 <Home />
@@ -36,7 +37,8 @@ export function Sidebar() {
                     <Link to='/budgets'>
                         <ListItem 
                             className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white h-14 mb-2 font-main font-semibold"  
+                            focus:bg-dark-green focus:text-off-white h-14 mb-2 
+                            font-main font-semibold"  
                         >
                             <ListItemPrefix>
                                 <Category />
@@ -47,7 +49,8 @@ export function Sidebar() {
                     <Link to='/challenges'>
                         <ListItem 
                             className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white h-14 mb-2 font-main font-semibold" 
+                            focus:bg-dark-green focus:text-off-white h-14 mb-2 
+                            font-main font-semibold" 
                         >
                             <ListItemPrefix>
                                 <Challenge />
@@ -58,7 +61,8 @@ export function Sidebar() {
                     <Link to='/analytics'>
                         <ListItem 
                             className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white h-14 mb-2 font-main font-semibold" 
+                            focus:bg-dark-green focus:text-off-white h-14 mb-2 
+                            font-main font-semibold" 
                         >
                             <ListItemPrefix>
                                 <Analytics />
@@ -69,7 +73,8 @@ export function Sidebar() {
                     <Link to='/rewards'>
                         <ListItem 
                             className="hover:bg-dark-green hover:text-off-white 
-                            focus:bg-dark-green focus:text-off-white h-14 mb-2 font-main font-semibold" 
+                            focus:bg-dark-green focus:text-off-white h-14 mb-2 
+                            font-main font-semibold" 
                         >
                             <ListItemPrefix>
                                 <Tag />

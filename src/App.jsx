@@ -1,19 +1,25 @@
 import { createContext, useState } from 'react'
 import { Header } from './components/navbar/Header'
 import { Sidebar } from './components/sidebar/Sidebar'
-import { SimpleRegistrationForm } from './components/SignUp/Signup'
-import { Login } from './components/SignUp/Login'
+import { SimpleRegistrationForm } from './components/signup/Signup'
+import { Login } from './components/signup/Login'
 import { useOutlet } from 'react-router-dom'
 import { Welcome } from './components/Welcome'
-import StarsCanvas from './components/SignUp/StarsCanvas'
+import StarsCanvas from './components/signup/StarsCanvas'
 
 export const AppContext = createContext()
 
 function App() {
+  /* To check user clicks on Sidebar icon */
   const [isMounted, setIsMounted] = useState(true)
+
+  /* To check if user is authenticated (temporary) */
   const [isAuth, setIsAuth] = useState(false)
+
+  /* To check if user is newly registered (temporary) */
   const [isNewUser, setIsNewUser] = useState(false)
 
+  /* Placeholder for Router components */
   const outlet = useOutlet()
 
   return (

@@ -1,7 +1,6 @@
-import { Button, Input, Select, Option, Radio, Typography } from "@material-tailwind/react"
+import { Button, Input, Select, Option } from "@material-tailwind/react"
 import { Alert } from "@material-tailwind/react"
 import { useState } from "react"
-import { GiWallet as Expense } from 'react-icons/gi'
 /* For form input validation */
 import * as yup from 'yup'
 import { useForm } from "react-hook-form"
@@ -9,19 +8,23 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 
 export function AddExpense(props) {
+    /* To notify user on button click */
     const [ showAlert, setShowAlert ] = useState(false)
 
+    /* Schema of form */
     const schema = yup.object().shape({
         type: yup.string(),
         category: yup.string(),
         amount: yup.number(),
     })
 
+    /* Functions from useForm hook */
     const { register, handleSubmit, setValue, formState: {errors} } = useForm({
         mode: "onChange",
         resolver: yupResolver(schema),
     })
 
+    /* Adding submitted data to array */
     const onSubmit = (data) => {
         props.setTableData([...props.tableData,{
             category: data.category,
@@ -51,7 +54,7 @@ export function AddExpense(props) {
                             className: 'font-main font-bold'
                         }}
                     >
-                        <Option value="Income" defau>Income</Option>
+                        <Option value="Income">Income</Option>
                         <Option value="Expense">Expense</Option>
                     </Select>
                 </div>

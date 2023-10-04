@@ -1,9 +1,6 @@
-import {
-    Menu,
-    Card,
-    Avatar,
-} from '@material-tailwind/react'
+import { Avatar } from '@material-tailwind/react'
 import maleProfile from '../../assets/maleProfile.jpeg'
+
 export function ProfilePic() {
     return (
         <main>

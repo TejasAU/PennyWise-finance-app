@@ -1,7 +1,8 @@
 import { FiBell as Bell } from 'react-icons/fi'
-
 import { Menu, MenuHandler, MenuItem, MenuList } from '@material-tailwind/react'
 import { Badge, IconButton, Typography } from '@material-tailwind/react'
+
+/* Menu that is displayed when user clicks on bell icon */
 
 export function NotificationMenu() {
     return (
