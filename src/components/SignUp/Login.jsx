@@ -17,7 +17,7 @@ export function Login() {
   }
 
   return (
-    <main className = "bg-rich-black  h-[100vh] flex flex-col justify-center">
+    <main className = "bg-transparent  h-[100vh] flex flex-col justify-center">
       <div className="text-off-white h-[75vh] w-auto grid grid-cols-2 items-center justify-center">
         <EarthCanvas />
         <div className="h-[75vh] flex items-center justify-center">

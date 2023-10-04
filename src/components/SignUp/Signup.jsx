@@ -5,7 +5,7 @@ import {
     Button,
     Typography,
   } from "@material-tailwind/react";
-
+import StarsCanvas from "./StarsCanvas";
 import { useContext } from "react";
 import { AppContext } from "../../App";
 import { useNavigate } from "react-router-dom";
@@ -21,8 +21,8 @@ import EarthCanvas from "./Earth";
     }
 
     return (
-      <main className="bg-rich-black text-off-white h-[100vh] flex items-center justify-center">
-            
+      <main className="bg-transparent text-off-white h-[100vh] flex items-center justify-center">
+            <StarsCanvas />
             <EarthCanvas /> 
             <Card color="transparent" shadow={false}>
       <Typography variant="h4" color="green" className="flex items-center justify-center">
