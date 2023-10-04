@@ -5,6 +5,7 @@ import { SimpleRegistrationForm } from './components/SignUp/Signup'
 import { Login } from './components/SignUp/Login'
 import { useOutlet } from 'react-router-dom'
 import { Welcome } from './components/Welcome'
+import StarsCanvas from './components/SignUp/StarsCanvas'
 
 export const AppContext = createContext()
 
@@ -30,7 +31,10 @@ function App() {
               isNewUser ? (
                 <SimpleRegistrationForm />
               ) : (
+                <div className='relative z-0'>
                 <Login />
+                <StarsCanvas />
+                </div>
               )
           )
         }
