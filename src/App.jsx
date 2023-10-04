@@ -18,9 +18,9 @@ function App() {
   return (
       <AppContext.Provider value = { {isMounted, setIsMounted, isAuth, setIsAuth, setIsNewUser}}>  
         { isAuth ? ( 
-            <div className='flex h-full w-full overflow-visible'>
+            <div className='flex h-full w-full min-h-screen'>
               {isMounted && <Sidebar />}
-              <div className='flex flex-col h-full w-full overflow-visible'>
+              <div className='flex flex-col w-full min-h-screen'>
                 <Header />
                 {outlet || <Welcome />}
               </div>
