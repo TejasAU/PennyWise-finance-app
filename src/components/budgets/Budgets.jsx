@@ -1,6 +1,8 @@
 import { Card } from "@material-tailwind/react"
 import { Metric } from "@tremor/react"
 import { useState } from "react"
+import { AddBudget } from "./AddBudget"
+import { UserBudgets } from "./UserBudgets"
 
 export function Budgets() {
     const [budgetData, setBudgetData] = useState([
