@@ -15,7 +15,7 @@ export function Main() {
             date: "Thu Sep 24 2023"
         },
         {
-            category: "Tranport",
+            category: "Transport",
             type: "Expense",
             amount: "Rs 200",
             date: "Fri Sep 26 2023"

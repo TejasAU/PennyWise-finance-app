@@ -1,7 +1,6 @@
 import { Card } from "@material-tailwind/react"
 import { Metric } from "@tremor/react"
 import { useState } from "react"
-import { AddBudget } from "./AddBudget"
 import { UserBudgets } from "./UserBudgets"
 
 export function Budgets() {
@@ -62,14 +61,7 @@ export function Budgets() {
                     </div>
                 </Card>
                 <Card 
-                    className="col-span-3 row-span-3 row-start-3 text-xl p-4 
-                    text-off-white bg-navy-blue
-                    hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green"
-                >
-                    <AddBudget />
-                </Card>
-                <Card 
-                    className="col-span-3 row-span-3 col-start-4 row-start-3 text-xl p-4 
+                    className="col-span-6 row-span-3 row-start-3 text-xl p-4 
                     text-off-white bg-navy-blue
                     hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green"
                 >
