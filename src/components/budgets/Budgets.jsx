@@ -6,7 +6,24 @@ import { UserBudgets } from "./UserBudgets"
 
 export function Budgets() {
     const [budgetData, setBudgetData] = useState([
-        {},{},{}
+        {
+            category: 'Food',
+            desc: 'Eating Out Budget',
+            amount: 2000,
+            color: "teal"
+        },
+        {
+            category: 'Transport',
+            desc: 'Work Transport Budget',
+            amount: 1000,
+            color: "lime"
+        },
+        {
+            category: 'Entertainment',
+            desc: 'OTL Subscription Budget',
+            amount: 800,
+            color: "pink"
+        }
     ])
     
     return(
@@ -56,7 +73,7 @@ export function Budgets() {
                     text-off-white bg-navy-blue
                     hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green"
                 >
-                    <UserBudgets />
+                    <UserBudgets budgetData={budgetData} />
                 </Card>
             </div>
         </main>

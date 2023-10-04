@@ -27,6 +27,7 @@ export function ExpensesChart() {
             <DonutChart
                     className="mt-6"
                     data={budgetData}
+                    showAnimation={true}
                     category="value"
                     index="category"
                     // TODO generate random color array
