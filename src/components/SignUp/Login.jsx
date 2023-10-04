@@ -3,6 +3,7 @@ import { AppContext } from "../../App"
 // import { Button } from "@material-tailwind/react"
 import { Card,Input,Checkbox,Button,Typography, } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
+import EarthCanvas from "./Earth";
 
 
 export function Login() {
@@ -18,7 +19,7 @@ export function Login() {
     return(
         <main className="bg-rich-black text-off-white h-[100vh] flex items-center justify-center">
             
-            
+           <EarthCanvas /> 
           <Card color="transparent" shadow={false}>
           <Typography variant="h4" color="green" className="flex items-center justify-center">
             Welcome Back!!
