@@ -1,4 +1,4 @@
-import { Card } from "@material-tailwind/react"
+import { Card, Typography } from "@material-tailwind/react"
 
 import { ExpensesChart } from "./ExpensesChart";
 import { DailyChallenges } from "./DailyChallenges";
@@ -34,7 +34,9 @@ export function Main() {
                     bg-gradient-to-r from-dark-green to-navy-blue 
                     xl:row-span-2 overflow-scroll lg"
                 >
-                    Welcome, John!<br />Let's take a gander at your expenses!   
+                    <Typography variant="h4" className="font-main flex items-center justify-center pt-6">
+                        Welcome, John!
+                    </Typography> 
                 </Card>
                 <Card
                     className="text-xl p-4 text-off-white  bg-navy-blue
