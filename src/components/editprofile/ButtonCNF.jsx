@@ -7,7 +7,7 @@ import {
     DialogFooter,
     Input
 } from "@material-tailwind/react"
-
+/*Button component to handle profile details*/
 export function ButtonCNF() {
     const [open, setOpen] = React.useState(false);
 

@@ -1,5 +1,6 @@
 import { Html, useProgress } from "@react-three/drei";
 
+//component for adding a base canvas for earth 3d model 
 const CanvasLoader = () => {
   const { progress } = useProgress();
   return (
