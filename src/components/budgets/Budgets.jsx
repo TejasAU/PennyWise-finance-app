@@ -70,6 +70,18 @@ export function Budgets() {
                 >
                     <UserBudgets budgetData={budgetData} />
                 </Card>
+                <Card className="col-span-6 row-span-3 row-start-7 text-xl p-4 
+                    text-off-white bg-navy-blue
+                    hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green">
+                        Add budgets
+                        Add budgets
+                        Add budgets
+                        Add budgets'\n'
+                        Add budgets
+                        Add budgets
+                        <div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div>
+
+                </Card>
             </div>
         </main>
     )
