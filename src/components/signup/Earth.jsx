@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "./CanvasLoader";
-
+// component for adding earth 3d model
 const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
 
