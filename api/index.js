@@ -36,9 +36,17 @@ app.use(cors());
 // })
 
 
+// const new_user = new userCollection({
+//     _id : 1,
+//     name : 'John Doe',
+//     email : 'john@gmail.com' ,
+//     passwords : "123",
+//     contact_no : '1234567890',
+//     location : 'pune'
+// })
 const new_user = new userCollection({
-    _id : 1,
-    name : 'John Doe',
+    _id : 2,
+    name : 'tejas Doe',
     email : 'john@gmail.com' ,
     passwords : "123",
     contact_no : '1234567890',
@@ -61,7 +69,9 @@ app.listen(3000, async () => {
         console.log("Mongodb connected to port 3000")
     })
     const db = client.db('PennyWiseDB');
-    db.createCollection('userCollection');
+    if(!db.collection("userCollection")){
+        db.createCollection('userCollection');
+    }
     const collection = db.collection('userCollection');
     collection.insertOne(new_user);
     // .new_user.save();
