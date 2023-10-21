@@ -35,15 +35,6 @@ app.use(cors());
 // })
 
 const {default : mongoose} = require('mongoose');
-app.listen(3000, async () => {
-    mongoose.connect("mongodb+srv://bhaaveshw:Pennywise2125@pennywise.vvlnwo3.mongodb.net/").then(() => {
-        console.log("Mongodb connected to port 3000")
-    })
-})
-
-app.get("/", (req, res) => {
-    // res.send("Welcome");
-    database.collection("PennyWiseDB").find({}).toArray((error,result) => {
-        res.send(result);
-    })
+mongoose.connect("mongodb+srv://bhaaveshw:Pennywise2125@pennywise.vvlnwo3.mongodb.net/").then(() => {
+    console.log("Mongodb connected to port 3000")
 })
