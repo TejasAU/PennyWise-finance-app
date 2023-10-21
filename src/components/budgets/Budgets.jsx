@@ -2,6 +2,7 @@ import { Card } from "@material-tailwind/react"
 import { Metric } from "@tremor/react"
 import { useState } from "react"
 import { UserBudgets } from "./UserBudgets"
+import { AddBudgets } from "./AddBudgets"
 
 /* Parent component for the Analytics Tab */
 
@@ -25,6 +26,20 @@ export function Budgets() {
             desc: 'OTL Subscription Budget',
             amount: 800,
             color: "pink"
+        }
+    ])
+    const [tableData, setTableData] = useState([
+        {
+            category: "Food",
+            type: "Expense",
+            amount: "Rs 1000",
+            date: "Thu Sep 24 2023"
+        },
+        {
+            category: "Transport",
+            type: "Expense",
+            amount: "Rs 200",
+            date: "Fri Sep 26 2023"
         }
     ])
     
@@ -73,14 +88,8 @@ export function Budgets() {
                 <Card className="col-span-6 row-span-3 row-start-7 text-xl p-4 
                     text-off-white bg-navy-blue
                     hover:shadow-[4px_3px_2px_1px] hover:shadow-dark-green">
-                        Add budgets
-                        Add budgets
-                        Add budgets
-                        Add budgets'\n'
-                        Add budgets
-                        Add budgets
-                        <div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div>
-
+                        <div className="flex flex-col justify-center items-center gap-4"> Edit Budgets</div>
+                        <AddBudgets tableData={tableData} setTableData={setTableData} />
                 </Card>
             </div>
         </main>
