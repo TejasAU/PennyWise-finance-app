@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
         type: "string",
         required: true,
     },
-    passwords : {
+    password : {
         type: "string",
         required: true,
     },
@@ -27,3 +27,14 @@ const userSchema = new mongoose.Schema({
 })
 
 const userCollection = mongoose.model("userCollection", userSchema)
+
+// userCollection.updateOne({_id: 1,
+//         name : 'Yash Jugade',
+//         email : 'yjugade@gmail.com',
+//         password : '12345',
+//         contact_no : '9527332805',
+//         location :  'Pune'})
+
+
+
+ module.exports=userCollection;
