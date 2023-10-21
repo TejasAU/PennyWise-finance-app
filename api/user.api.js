@@ -38,3 +38,4 @@ const userCollection = mongoose.model("userCollection", userSchema)
 
 
  module.exports=userCollection;
+
