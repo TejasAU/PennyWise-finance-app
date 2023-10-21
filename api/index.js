@@ -34,7 +34,9 @@ app.use(cors());
 //     })
 // })
 
-const {default : mongoose} = require('mongoose');
-mongoose.connect("mongodb+srv://bhaaveshw:Pennywise2125@pennywise.vvlnwo3.mongodb.net/").then(() => {
-    console.log("Mongodb connected to port 3000")
+const { default: mongoose } = require('mongoose');
+app.listen(3000, async () => {
+    mongoose.connect("mongodb+srv://bhaaveshw:Pennywise2125@pennywise.vvlnwo3.mongodb.net/").then(() => {
+        console.log("Mongodb connected to port 3000")
+    })
 })
