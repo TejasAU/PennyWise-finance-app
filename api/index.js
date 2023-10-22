@@ -59,7 +59,7 @@ const userTransactions = new Transaction({
     email: 'john@gmail.com'
 })
 
-const userBudget =  new budget({
+const userBudget = new budget({
     budgetTitle: 'FOOD',
     category: 'expense',
     type: 'food',
@@ -68,19 +68,19 @@ const userBudget =  new budget({
     email: 'john@gmail.com'
 })
 
-const userChallenges = new challenges ({
+const userChallenges = new challenges({
     challengeTitle: "abc",
     description: "def",
     difficulty: "high",
     points: '120',
 })
 
-const userRewards = new rewards ({
+const userRewards = new rewards({
     _id: "1",
     rewardsTitle: "flexi",
     description: "kill flexi",
     difficulty: "10",
-    points:"200",
+    points: "200",
     challengeTitle: "C1"
 })
 const userRewardsData = new user_reward_data({
@@ -94,6 +94,7 @@ const { default: mongoose } = require('mongoose');
 const Database = 'PennyWiseDB'
 const client = new MongoClient("mongodb+srv://bhaaveshw:Pennywise2125@pennywise.vvlnwo3.mongodb.net/")
 const db = client.db('PennyWiseDB');
+
 // app.get("/", (req, res) => {
 //     // res.send("Welcome");
 //     db.collection("userCollection").find({}).toArray((error, result) => {
@@ -101,35 +102,59 @@ const db = client.db('PennyWiseDB');
 //     })
 // })
 
+async function checkCollectionsExist(e) {
+    const collectionNames = [
+        'User_c',
+        'Transaction_collection',
+        'budget_collection',
+        'challenges_collection',
+        'rewards_collection',
+        'user_reward_data_collection',
+    ];
+
+    try {
+        for (const collectionName of collectionNames) {
+            const collectionExists = collections.some(collection => collection.name === collectionName);
+            if (!collectionExists) {
+                await db.createCollection(collectionName);
+                console.log(`Created collection ${collectionName}`);
+            }
+        }
+    } catch (e) {
+        console.log(error.message[0]);
+    }
+}
 app.listen(3000, async () => {
     mongoose.connect("mongodb+srv://bhaaveshw:Pennywise2125@pennywise.vvlnwo3.mongodb.net/").then(() => {
         console.log("Mongodb connected to port 3000")
     })
-    // if (!db.collection("userCollection")) {
-    //     db.createCollection('userCollection');
-    // }
-    // db.createCollection('userCollection');
-    db.createCollection('User');
-    const User_c = db.collection('User');
-    User_c.insertOne(new_user);
+    const collectionExistenceArray = await checkCollectionsExist();
 
-    db.createCollection('Transaction');
-    const Transaction_collection = db.collection('Transaction');
-    Transaction_collection.insertOne(userTransactions);
-
-    db.createCollection('budget');
-    const budget_collection = db.collection('budget');
-    budget_collection.insertOne(userBudget);
-
-    db.createCollection('challenges');
-    const challenges_collection = db.collection('challenges');
-    challenges_collection.insertOne(userChallenges);
-
-    db.createCollection('rewards');
-    const rewards_collection = db.collection('rewards');
-    rewards_collection.insertOne(userRewards);
-
-    db.createCollection('user_reward_data');
-    const user_reward_data_collection = db.collection('user_reward_data');
-    user_reward_data_collection.insertOne(userRewardsData);
 })
+
+///////////////////////////////////////////////////
+// CREATE QUERIES for collection in MONGO :-
+// db.createCollection('User');
+// db.createCollection('Transaction');
+// db.createCollection('budget');
+// db.createCollection('challenges');
+// db.createCollection('rewards');
+// db.createCollection('user_reward_data');
+
+// const User_c = db.collection('User');
+// User_c.insertOne(new_user);
+
+// const Transaction_collection = db.collection('Transaction');
+// Transaction_collection.insertOne(userTransactions);
+
+// const budget_collection = db.collection('budget');
+// budget_collection.insertOne(userBudget);
+
+// const challenges_collection = db.collection('challenges');
+// challenges_collection.insertOne(userChallenges);
+
+// const rewards_collection = db.collection('rewards');
+// rewards_collection.insertOne(userRewards);
+
+// const user_reward_data_collection = db.collection('user_reward_data');
+// user_reward_data_collection.insertOne(userRewardsData);
