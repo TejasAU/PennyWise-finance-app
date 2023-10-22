@@ -1,29 +1,21 @@
+import { userCredentialsSchema } from './signup/signup_login';
+import { BudgetSchema } from './signup/budget';
+import { TransactionSchema } from './signup/transaction';
+
+
+
 const { default: mongoose } = require("mongoose");
 
 // User Schema :
 const userSchema = new mongoose.Schema({
-    name : {
-        type: "string",
-        required: true,
+    _id: {
+        type: 'String',
+        required: false
     },
-    email : {
-        type: "string",
-        required: true,
-    },
-    password : {
-        type: "string",
-        required: true,
-    },
-    contact_no : {
-        type : "string",
-        required: false,
-    },
-    // 
-    location : {
-        type: "string",
-        required: false,
-    }
-    //
+    userCred: [userCredentialsSchema],
+    userTransactions: [ TransactionSchema ],
+    userBudget: [ BudgetSchema ],
+
 })
 
 const userCollection = mongoose.model("userCollection", userSchema)
@@ -37,5 +29,5 @@ const userCollection = mongoose.model("userCollection", userSchema)
 
 
 
- module.exports=userCollection;
+module.exports = userCollection;
 

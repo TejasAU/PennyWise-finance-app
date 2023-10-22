@@ -3,7 +3,7 @@ var MongoClient = require('mongodb').MongoClient;
 var cors = require('cors');
 const multer = require('multer');
 
-const userCollection = require('./user.api');
+const userCollection = require('./Schema/Main_Schema/userSchema');
 var app = Express();
 app.use(cors());
 
@@ -45,8 +45,8 @@ app.use(cors());
 //     location : 'pune'
 // })
 const new_user = new userCollection({
-    _id : 2,
-    name : 'tejas Doe',
+    _id : '4',
+    name : 'Deepak Doe',
     email : 'john@gmail.com' ,
     passwords : "123",
     contact_no : '1234567890',
@@ -64,16 +64,23 @@ const { default: mongoose } = require('mongoose');
 //
 const Database = 'PennyWiseDB'
 const client = new MongoClient("mongodb+srv://bhaaveshw:Pennywise2125@pennywise.vvlnwo3.mongodb.net/")
+const db = client.db('PennyWiseDB');
+
+
+app.get("/", (req, res) => {
+    // res.send("Welcome");
+    db.collection("userCollection").find({}).toArray((error,result) => {
+        res.send(result);
+    })
+})
+
 app.listen(3000, async () => {
     mongoose.connect("mongodb+srv://bhaaveshw:Pennywise2125@pennywise.vvlnwo3.mongodb.net/").then(() => {
         console.log("Mongodb connected to port 3000")
     })
-    const db = client.db('PennyWiseDB');
     if(!db.collection("userCollection")){
         db.createCollection('userCollection');
     }
     const collection = db.collection('userCollection');
     collection.insertOne(new_user);
-    // .new_user.save();
 })
-
