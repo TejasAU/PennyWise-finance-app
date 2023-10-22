@@ -1,4 +1,4 @@
-
+const { default: mongoose } = require("mongoose");
 const Budget = new mongoose.Schema({
     budgetName: {
         type: 'String',
@@ -19,4 +19,4 @@ const Budget = new mongoose.Schema({
 })
 
 const BudgetSchema = mongoose.model('BudgetSchema', Budget)
-model.exports = { BudgetSchema }
+module.exports = { BudgetSchema }

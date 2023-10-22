@@ -46,11 +46,21 @@ app.use(cors());
 // })
 const new_user = new userCollection({
     _id : '4',
-    name : 'Deepak Doe',
-    email : 'john@gmail.com' ,
-    passwords : "123",
-    contact_no : '1234567890',
-    location : 'pune'
+    userCred : {
+        name : 'Deepak Doe',
+        email : 'john@gmail.com' ,
+        passwords : "123",
+        contact_no : '1234567890',
+        location : 'pune'
+    }
+    userTransactions: {
+        TransactionId:1,
+        Type: "expense",
+        catagory: "food",
+        amount: "100",
+        date: "10-08-2003"
+    },
+    userBudget: [ BudgetSchema ],
 })
 
 // async function create(new_user) {

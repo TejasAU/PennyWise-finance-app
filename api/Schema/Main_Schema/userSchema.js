@@ -1,9 +1,6 @@
-import { userCredentialsSchema } from './signup/signup_login';
-import { BudgetSchema } from './signup/budget';
-import { TransactionSchema } from './signup/transaction';
-
-
-
+const userCredentialsSchema = require('../signup/signup_login.js');
+const BudgetSchema = require('../budget/budget.js');
+const TransactionSchema = require('../transaction/transaction.js');
 const { default: mongoose } = require("mongoose");
 
 // User Schema :
@@ -12,7 +9,7 @@ const userSchema = new mongoose.Schema({
         type: 'String',
         required: false
     },
-    userCred: [userCredentialsSchema],
+    userCred: [ userCredentialsSchema ],
     userTransactions: [ TransactionSchema ],
     userBudget: [ BudgetSchema ],
 

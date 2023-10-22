@@ -1,4 +1,4 @@
-const { model } = require("mongoose")
+const { default: mongoose } = require("mongoose");
 
 const LoginSignup = new mongoose.Schema({
     name : {
@@ -27,4 +27,4 @@ const LoginSignup = new mongoose.Schema({
 
 const userCredentialsSchema = mongoose.model('userCredentials', LoginSignup)
 
-model.exports = {userCredentialsSchema}
+module.exports = userCredentialsSchema
