@@ -1,4 +1,4 @@
-import { express } from "express";
+import express from "express";
 import User from "./DB_models/User.js"
 
 const router = express.Router();
@@ -13,3 +13,5 @@ router.post('/', async(req, res) => {
         res.status(500).json(err)
     }
 })
+
+export default router
