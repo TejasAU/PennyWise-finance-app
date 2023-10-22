@@ -1,20 +1,20 @@
 const { default: mongoose } = require("mongoose");
 
 const rewardsSchema = new mongoose.Schema({
-    email : {
+    email: {
         type: String,
         required: true,
     },
-    rewardsTitle:{
+    rewardsTitle: {
         type: String,
         required: true,
     },
-    challengeTitle:{
+    challengeTitle: {
         type: String,
         required: true,
     },
 })
 
-const userRewardsCollection = mongoose.model("userRewardsCollection", userRewardsSchema)
+const userRewardsCollection = mongoose.model('userRewardsCollection', rewardsSchema)
 
-module.exports=userRewardsCollection;
+module.exports = userRewardsCollection;

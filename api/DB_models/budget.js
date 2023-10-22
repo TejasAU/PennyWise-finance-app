@@ -1,38 +1,38 @@
 const { default: mongoose } = require("mongoose");
 
-const transactionSchema = new mongoose.Schema(
+const budgetSchema = new mongoose.Schema(
     {
-        _id:{
+        _id: {
             type: String,
             required: true
         },
-        transactionid:{
-            type:String,
+        budgetTitle: {
+            type: String,
             required: true
         },
-        category:{
-            type:String,
+        category: {
+            type: String,
             required: true
         },
-        type:{
-            type:String,
+        type: {
+            type: String,
             required: true
         },
-        amount:{
+        amount: {
             type: Number,
             required: true
         },
-        date:{
+        targetDate: {
             type: Date,
             required: true
         },
-        email:{
-            type:String,
+        email: {
+            type: String,
             required: true
         }
     }
 )
 
-const transactionCollection=mongoose.model("transactionCollection", transactionSchema)
+const budgetCollection = mongoose.model("budgetsCollection", budgetSchema)
 
-module.exports=userCollection;
+module.exports = budgetCollection;

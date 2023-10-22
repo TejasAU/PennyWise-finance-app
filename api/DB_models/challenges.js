@@ -1,28 +1,28 @@
 const { default: mongoose } = require("mongoose");
 
 const challengesSchema = new mongoose.Schema({
-    _id:{
+    _id: {
         type: String,
         required: true,
     },
-    challengeTitle:{
+    challengeTitle: {
         type: String,
         required: true,
     },
-    description:{
+    description: {
         type: String,
         required: true,
     },
-    difficulty:{
+    difficulty: {
         type: String,
         required: true,
     },
-    points:{
+    points: {
         type: String,
         required: true,
     },
 })
 
-const challengesCollection=mongoose.model("challengesModel", challengesSchema)
+const challengesCollection = mongoose.model("challengesModel", challengesSchema)
 
-module.exports=challengesCollection;
+module.exports = challengesCollection;

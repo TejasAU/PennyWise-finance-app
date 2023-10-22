@@ -1,27 +1,27 @@
 const { default: mongoose } = require("mongoose");
 
 const rewardsSchema = new mongoose.Schema({
-    _id:{
+    _id: {
         type: String,
         required: true,
     },
-    rewardsTitle:{
+    rewardsTitle: {
         type: String,
         required: true,
     },
-    description:{
+    description: {
         type: String,
         required: true,
     },
-    difficulty:{ //can remove this
+    difficulty: { //can remove this
         type: String,
         required: false,
     },
-    points:{
+    points: {
         type: String,
         required: true,
     },
-    challengeTitle:{
+    challengeTitle: {
         type: String,
         required: true,
     },
@@ -29,4 +29,4 @@ const rewardsSchema = new mongoose.Schema({
 
 const rewardsCollection = mongoose.model("rewardsCollection", rewardsSchema)
 
-module.exports=rewardsCollection;
+module.exports = rewardsCollection;
