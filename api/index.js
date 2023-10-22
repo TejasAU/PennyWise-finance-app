@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import router from './login.js';
+import signuprouter from './signup.js';
 
 const app = express();
 dotenv.config();
@@ -27,6 +28,7 @@ mongoose.connection.on("disconnected", () => {
 
 app.use(express.json());
 app.use('/',router)
+app.use('/',signuprouter)
 app.use(cors())
 app.use(cookieParser())
 
