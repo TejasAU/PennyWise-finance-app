@@ -2,12 +2,12 @@
 // const BudgetSchema = require('../Schema/budget/budget.js');
 // const TransactionSchema = require('../Schema/transaction/transaction.js');
 
-const budget = require('./budget')
-const challenges = require('./challenges')
-const rewards = require('./rewards')
-const Transaction = require('./Transaction')
-const user_reward_data = require('./user_reward_data')
-const User = require('./User')
+// const budget = require('./budget')
+// const challenges = require('./challenges')
+// const rewards = require('./rewards')
+// const Transaction = require('./Transaction')
+// const user_reward_data = require('./user_reward_data')
+// const User = require('./User')
 const { default: mongoose } = require("mongoose");
 
 // User Schema :
