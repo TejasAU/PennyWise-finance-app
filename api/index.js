@@ -3,8 +3,11 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import router from './login.js';
-import signuprouter from './signup.js';
+
+// import router from "./routes/auth.js";
+import loginRouter from './routes/login.js';
+import signupRouter from './routes/signup.js';
+import budgetRouter from './routes/add_budget.js';
 
 const app = express();
 dotenv.config();
@@ -31,8 +34,10 @@ mongoose.connection.on("disconnected", () => {
 // })
 
 app.use(express.json());
-app.use('/', router)
-app.use('/', signuprouter)
+// app.use('/', router)
+app.use('/', loginRouter)
+app.use('/', signupRouter)
+app.use('/', budgetRouter)
 app.use(cors())
 app.use(cookieParser())
 

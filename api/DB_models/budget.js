@@ -1,4 +1,4 @@
-const { default: mongoose } = require("mongoose");
+import mongoose from 'mongoose';
 
 const budgetSchema = new mongoose.Schema(
     {
@@ -33,6 +33,6 @@ const budgetSchema = new mongoose.Schema(
     }
 )
 
-const budgetCollection = mongoose.model("budgetsCollection", budgetSchema)
+const budgetCollection = mongoose.model("budgetsCollection", budgetSchema, 'Budget')
 
-module.exports = budgetCollection;
+export default budgetCollection

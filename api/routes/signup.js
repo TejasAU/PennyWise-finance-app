@@ -1,22 +1,15 @@
 import express from "express";
-import User from "./DB_models/User.js"
-import { MongoClient } from "mongodb";
+// import User from "../DB_models/User.js"
+import register from '../controllers/auth.js';
 
-const signuprouter = express.Router();
+
+const signupRouter = express.Router();
 
 // Create User :
-signuprouter.post('/signup', async (req, res) => {
-  const newUser = new User(req.body)
-  try {
-    const savedUser = await newUser.save()
-    res.status(200).json(savedUser)
-  } catch (err) {
-    res.status(500).json(err)
-  }
-});
+signupRouter.post('/signup', register);
 
 // Update User
-signuprouter.put('/signup/:id', async (req, res) => {
+signupRouter.put('/signup/:id', async (req, res) => {
   // const newUser = new User(req.body)
   try {
     const updatedUser = await User.findByIdAndUpdate(
@@ -31,7 +24,7 @@ signuprouter.put('/signup/:id', async (req, res) => {
 });
 
 //Delete User:
-signuprouter.delete('/signup/:id', async (req, res) => {
+signupRouter.delete('/signup/:id', async (req, res) => {
   // const newUser = new User(req.body)
   try {
     await User.findByIdAndDelete(
@@ -44,7 +37,7 @@ signuprouter.delete('/signup/:id', async (req, res) => {
 });
 
 // Get User :
-signuprouter.get('/signup/:id', async (req, res) => {
+signupRouter.get('/signup/:id', async (req, res) => {
   try {
     const savedUser = await User.findById(req.params.id);
     res.status(200).json(savedUser)
@@ -54,7 +47,7 @@ signuprouter.get('/signup/:id', async (req, res) => {
 });
 
 // Get all :
-signuprouter.get('/signup', async (req, res) => {
+signupRouter.get('/signup', async (req, res) => {
   try {
     const savedUser = await User.find();
     res.status(200).json(savedUser)
@@ -65,4 +58,4 @@ signuprouter.get('/signup', async (req, res) => {
 
 
 
-export default signuprouter
+export default signupRouter
