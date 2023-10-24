@@ -3,9 +3,8 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-
-// import router from "./routes/auth.js";
-import loginRouter from './routes/login.js';
+import router from "./routes/auth.js";
+// import loginRouter from './routes/login.js';
 import signupRouter from './routes/signup.js';
 import budgetRouter from './routes/add_budget.js';
 
@@ -33,13 +32,13 @@ mongoose.connection.on("disconnected", () => {
 //     res.send("HOW ARE YOU BABY")
 // })
 
-app.use(express.json());
-// app.use('/', router)
-app.use('/', loginRouter)
-app.use('/', signupRouter)
-app.use('/', budgetRouter)
 app.use(cors())
 app.use(cookieParser())
+app.use(express.json());
+app.use('/', router)
+// app.use('/', loginRouter)
+app.use('/', signupRouter)
+app.use('/', budgetRouter)
 
 
 app.use((err, req, res, next) => {

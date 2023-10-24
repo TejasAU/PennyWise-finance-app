@@ -21,9 +21,9 @@ const userSchema = new mongoose.Schema({
     location: {
         type: 'String',
         required: false,
-    }
+    },
     //
-})
+},{timestamps : true})
 
 const userCollection = mongoose.model('userCollection', userSchema, 'User')
 
